@@ -29,11 +29,31 @@ html {
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 500vh;
   background-color: black;
   color: white;
-  
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
+button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.6;
 }
 
 .wrap {
@@ -58,13 +78,41 @@ body {
 }
 
 .primary-color {
-  color: #00FFF3;
+  background: linear-gradient( 90deg, #00fff2, #8631ff );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.mint-color {
+  background: #00fff2;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.purple-color {
+  background: #8631ff;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.white-color {
+  background: #fff;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+button.btn-basic {
+  background: linear-gradient( 90deg, #00fff2, #8631ff );
+  padding: 1rem 4rem;
+  border-radius: 2rem;
 }
 
 #main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 7.8vw;
 
   .main-wrapper {
     display: flex;
@@ -81,16 +129,76 @@ body {
     h1 {
       font-size: 4rem;
       text-transform: uppercase;
-      margin-bottom: 1rem;
-      
-      span {
-        font-weight: 100;
-      }
     }
 
     h5 {
       font-size: 2rem;
+      font-weight: normal;
       margin-bottom: 1rem;
     }
   }
+
+  .text-center {
+      line-height: 2;
+      margin-bottom: 2rem;
+  }
 }
+
+#agenda {
+  h5 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  tr {
+    border-top: 0.5px solid #eee;
+
+    &:last-child {
+      border-bottom: 0.5px solid #eee;
+    }
+  }
+  
+  tbody th:nth-child(1) {
+    width: 20%;
+  }
+  
+  tbody th:nth-child(2) {
+    width: 50%;
+  }
+  
+  tbody th:nth-child(3) {
+    width: 30%;
+  }
+  
+  th, td {
+    padding: 1rem 0;
+  }
+
+  .track-box {
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border-image-slice: 1;
+    margin-bottom: 1rem;
+    width: 50%;
+  }
+
+  .mint-color {
+    .track-box {
+      border: 1px solid #00fff2;
+    }
+  }
+
+  .purple-color {
+    .track-box {
+      border: 1px solid #8631ff;
+    }
+  }
+}
+

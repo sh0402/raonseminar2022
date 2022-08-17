@@ -12,21 +12,22 @@
 
 <body>
   <div class="wrap">
-    <div id="main">
+
+    <section id="main">
       <div class="main-wrapper">
         <img src="./img/main-img.png" alt="">
 
         <div class="textarea">
           <h1 class="primary-color">
-            SQUP <span>Seminar 2022</span>
+            시큐업 세미나 2022
           </h1>
           <h5 class="primary-color">디지털 인증의 현재와 미래</h5>
           <div class="text-group">
             <p>
-              2022.10.4(화) 13:00-17:10 &nbsp; <span class="primary-color">코엑스 컨퍼런스 E5, 6</span>
+              2022.10.4(화) 13:00-17:10 &nbsp; 코엑스 컨퍼런스 E5, E6</span>
             </p>
             <p>
-              주최 <span class="primary-color">한국디지털인증협회</span> &nbsp; 주관 <span class="primary-color">라온화이트햇</span>
+              주최 한국디지털인증협회</span> &nbsp; 주관 라온화이트햇</span>
             </p>
           </div>
         </div>
@@ -34,15 +35,179 @@
 
       <div class="w-1000">
         <p class="text-center">
-          전 세계적으로 확산되고 있는 산업 전반의 디지털 전환에 따라 가상 공간에서 ‘내가 나’임을 증명해야 하는 디지털인 증 시대가 열렸습니다.
-          디지털 세상 속 신뢰된 신원 인증, 증명에 있어서 가장 큰 도전 과제와 필요한 핵심 기술은 무엇일까요?
-          빠르게 변화하는 디지털 인증 시장에 선제적으로 대응하기 위한 전략을 논의하는 ‘시큐업 세미나 2022’에 여러분을 초대합니다!
+          전 세계적으로 확산되고 있는 산업 전반의 디지털 전환에 따라<br>
+          가상 공간에서 ‘내가 나’임을 증명해야 하는 디지털 인증 시대가 열렸습니다.<br>
+          디지털 세상 속 신뢰된 신원 인증, 증명에 있어서 가장 큰 도전 과제와 필요한 핵심 기술은 무엇일까요?<br>
+          빠르게 변화하는 디지털 인증 시장에 선제적으로 대응하기 위한 전략을 논의하는<br>
+          ‘시큐업 세미나 2022’에 여러분을 초대합니다!
         </p>
       </div>
-    </div>
 
+      <button class="btn-basic">
+        사전 등록하기 >
+      </button>
+    </section>
 
+    <section id="agenda">
+
+      <div class="container">
+        <h5 class="primary-color text-center"> - AGENDA - </h5>
+      </div>
+
+      <table>
+        <tbody class="text-left">
+          <tr>
+            <th scope="row">13:00 - 14:00</th>
+            <td>등록 및 전시부스 관람</td>
+            <td> </td>
+          </tr>
+
+          <tr>
+            <th scope="row">14:00 - 14:10</th>
+            <td class="mint-color">오프닝: 디지털인증의 현재와 미래</td>
+            <td>한국디지털인증협회 이기혁 회장</td>
+          </tr>
+
+          <tr>
+            <th scope="row">14:10 - 14:30</th>
+            <td class="mint-color">Balancing Security And Privacy With Trust And Accountability</td>
+            <td>ADI Association Ramesh Kesanupalli</td>
+          </tr>
+
+          <tr>
+            <th scope="row">14:30 - 14:50</th>
+            <td class="mint-color">'모바일 운전면허증' 신분증의 패러다임을 바꾸다</td>
+            <td>행정안전부 이상민 과장</td>
+          </tr>
+
+          <tr>
+            <th scope="row">15:10 - 15:40</th>
+            <td class="mint-color">Coffee Break / 전시부스 관람</td>
+            <td> </td>
+          </tr>
+
+          <tr>
+            <th scope="row">15:40 - 16:00</th>
+
+            <td class="mint-color">
+              <div class="track-box">Track A</div>
+              <p>Coffee Break / 전시부스 관람</p>
+              <p class="white-color">병무청 백상현 서기관</p>
+            </td>
+
+            <td class="purple-color">
+              <div class="track-box">Track B</div>
+              <p>전자서명인증사업자'를 통한 인증 중계의 방향</p>
+              <p class="white-color">KISA 박정효 책임</p>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">16:00 - 16:20</th>
+
+            <td class="mint-color">
+              <p>OmniOne NFT Market Place</p>
+              <p class="white-color">라온화이트햇 김진호 이사</p>
+            </td>
+
+            <td class="purple-color">
+              <p>디지털 인증을 활용한 안전하고 편리한 모두의 전자지갑</p>
+              <p class="white-color">NH농협상호금융 정재헌 부장</p>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </section>
+
+    <canvas id="rain"></canvas>
   </div>
+
+  <script>
+    var matrix = (function () {
+      var init = function () {
+        document.body.style.background = 'black';
+        var mdr = document.createElement('canvas');
+        document.body.prepend(mdr);
+
+        var ctx = mdr.getContext("2d");
+
+        //making the canvas full screen
+        mdr.height = window.innerHeight;
+        mdr.width = window.innerWidth;
+
+
+        //code characters - taken from the unicode charset
+        var code = "0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0";
+        //converting the string into an array of single characters
+        code = code.split("");
+
+        var font_size = 24;
+        var columns = mdr.width / font_size; //number of columns for the rain
+        //an array of drops - one per column
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for (var x = 0; x < columns; x++) {
+          drops[x] = 400;;
+        }
+
+        window.addEventListener('resize', function () {
+          window.requestAnimationFrame(function () {
+            mdr.height = window.innerHeight;
+            mdr.width = window.innerWidth;
+            columns = mdr.width / font_size;
+            for (var x = 0; x < columns; x++) {
+              drops[x] = 400;
+            }
+          });
+        });
+
+        //drawing the characters
+        var draw = function () {
+          //Black BG for the canvas
+          //translucent BG to show trail
+          ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+          ctx.fillRect(0, 0, mdr.width, mdr.height);
+
+          ctx.fillStyle = "#00fff23e"; //text color
+          ctx.font = font_size + "px arial";
+          //looping over drops
+          for (var i = 0; i < drops.length; i++) {
+            //a random code character to print
+            var text = code[Math.floor(Math.random() * code.length)];
+            //x = i*font_size, y = value of drops[i]*font_size
+            ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+            //sending the drop back to the top randomly after it has crossed the screen
+            //adding a randomness to the reset to make the drops scattered on the Y axis
+            if (drops[i] * font_size > mdr.height && Math.random() > 0.975) {
+              //if(Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+
+            //incrementing Y coordinate
+            drops[i]++;
+          }
+        };
+
+        setInterval(function () { window.requestAnimationFrame(draw) }, 60);
+
+      };
+
+      return {
+        "init": init
+      };
+
+    })();
+
+    // init on dom ready
+    (function (fn) { var d = document; (d.readyState == 'loading') ? d.addEventListener('DOMContentLoaded', fn) : fn(); })(function () {
+      matrix.init();
+    });
+  </script>
+
 </body>
 
 </html>
