@@ -8,6 +8,8 @@
   <title>SQUP Seminar 2022</title>
 
   <link rel="stylesheet" href="https://sh0402.github.io/raonseminar2022/eDM/css/style.css">
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
 <body>
@@ -115,15 +117,36 @@
               <p class="white-color">NH농협상호금융 정재헌 부장</p>
             </td>
           </tr>
-
         </tbody>
       </table>
     </section>
 
     <canvas id="rain"></canvas>
+
+    <div id="content"></div>
   </div>
 
   <script src="https://sh0402.github.io/raonseminar2022/eDM/js/main.js"></script>
+
+  <script>
+    /**
+    * Test harness to find out the best method for dynamically loading a
+    * html page into your app.
+    */
+    const test_times = {};
+    const test_page = 'https://sh0402.github.io/raonseminar2022/eDM/';
+    const content_div = document.getElementById('content');
+
+    // TEST 1 = use jQuery to load in testpage.htm and time it.
+
+    function test_() {
+      var start = new Date().getTime();
+      $(content_div).load(test_page, function () {
+        //alert(new Date().getTime() - start);
+      });
+    }
+    test_();
+  </script>
 
 </body>
 
