@@ -120,17 +120,11 @@
     }
 
     table {
-      tbody tr {
-        border-top: 0.5px solid #eee;
-
-        &:last-child {
-          border-bottom: 0.5px solid #eee;
-        }
-      }
 
       tbody th,
       tbody td {
         line-height: 1.6;
+        border-top: 1px solid #eee;
         border: none;
       }
 
@@ -440,6 +434,11 @@
     }
 
     table {
+      tbody th,
+      tbody td {
+        border-top: 1px solid #eee;
+      }
+
       tbody th {
         font-size: 2.9vw;
       }
@@ -671,6 +670,11 @@
     }
 
     table {
+      tbody th,
+      tbody td {
+        border-top: 1px solid #eee;
+      }
+
       tbody th {
         font-size: 3.1vw;
       }
@@ -925,7 +929,7 @@
         font-size: 1rem;
         line-height: 1.4;
         letter-spacing: -20;
-        border-top: 0.5px solid #eee;
+        border-top: 1px solid #eee;
       }
   
       tbody th {
@@ -1323,7 +1327,7 @@
         font-size: 1rem;
         line-height: 1.4;
         letter-spacing: -20;
-        border-top: 0.5px solid #eee;
+        border-top: 1px solid #eee;
       }
   
       tbody th {

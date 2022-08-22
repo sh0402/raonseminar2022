@@ -87,15 +87,10 @@
     font-size: 3.8vw;
     line-height: 1.4;
   }
-  #agenda table tbody tr {
-    border-top: 0.5px solid #eee;
-  }
-  #agenda table tbody tr:last-child {
-    border-bottom: 0.5px solid #eee;
-  }
   #agenda table tbody th,
 #agenda table tbody td {
     line-height: 1.6;
+    border-top: 1px solid #eee;
     border: none;
   }
   #agenda table tbody th {
@@ -298,6 +293,10 @@
     font-size: 3.3vw;
     line-height: 1.4;
   }
+  #agenda table tbody th,
+#agenda table tbody td {
+    border-top: 1px solid #eee;
+  }
   #agenda table tbody th {
     font-size: 2.9vw;
   }
@@ -448,6 +447,10 @@
   }
   #agenda .swiper .swiper-slide .item-group p {
     font-size: 2.5vw;
+  }
+  #agenda table tbody th,
+#agenda table tbody td {
+    border-top: 1px solid #eee;
   }
   #agenda table tbody th {
     font-size: 3.1vw;
@@ -627,7 +630,7 @@
     font-size: 1rem;
     line-height: 1.4;
     letter-spacing: -20;
-    border-top: 0.5px solid #eee;
+    border-top: 1px solid #eee;
   }
   #agenda table tbody th {
     vertical-align: middle;
@@ -907,7 +910,7 @@
     font-size: 1rem;
     line-height: 1.4;
     letter-spacing: -20;
-    border-top: 0.5px solid #eee;
+    border-top: 1px solid #eee;
   }
   #agenda table tbody th {
     vertical-align: middle;
