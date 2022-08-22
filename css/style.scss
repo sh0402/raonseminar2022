@@ -1,10 +1,13 @@
 @import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
+  font-family: 'AppleSDGothicNeo', 'Helvetica Neue', 'Noto Sans KR', Arial,
+    sans-serif !important;
 }
 
 h1,
@@ -26,7 +29,7 @@ body {
   background-color: black;
   color: white;
   font-family: 'AppleSDGothicNeo', 'Helvetica Neue', 'Noto Sans KR', Arial,
-    sans-serif;
+    sans-serif !important;
 }
 
 canvas {
