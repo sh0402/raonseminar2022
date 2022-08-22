@@ -91,7 +91,6 @@
 #agenda table tbody td {
     line-height: 1.6;
     border-top: 1px solid #eee;
-    border: none;
   }
   #agenda table tbody th {
     vertical-align: top;
