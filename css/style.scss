@@ -118,28 +118,28 @@ strong {
 
 // SPEAKERS 썸네일
 .img-chungang {
-  background: url('../img/speakers-thumb/img-chungang.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-chungang.png') no-repeat center center / cover;
 }
 .img-did {
-  background: url('../img/speakers-thumb/img-did.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-did.png') no-repeat center center / cover;
 }
 .img-dt {
-  background: url('../img/speakers-thumb/img-dt.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-dt.png') no-repeat center center / cover;
 }
 .img-mma {
-  background: url('../img/speakers-thumb/img-mma.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-mma.png') no-repeat center center / cover;
 }
 .img-naver {
-  background: url('../img/speakers-thumb/img-naver.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-naver.png') no-repeat center center / cover;
 }
 .img-nh {
-  background: url('../img/speakers-thumb/img-nh.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-nh.png') no-repeat center center / cover;
 }
 .img-raonwh-1 {
-  background: url('../img/speakers-thumb/img-raonwh-1.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-raonwh-1.png') no-repeat center center / cover;
 }
 .img-raonwh-2 {
-  background: url('../img/speakers-thumb/img-raonwh-2.png') no-repeat center center / cover;
+  background: url('/img/speakers-thumb/img-raonwh-2.png') no-repeat center center / cover;
 }
 
 
@@ -448,7 +448,7 @@ strong {
             height: 20rem;
             justify-content: start;
             background: 
-              url("../img/event_img_01.png") no-repeat right bottom/contain,
+              url("/img/event_img_01.png") no-repeat right bottom/contain,
               linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
               linear-gradient(0deg, #00fff228 1%, #22222270 10%);
 
@@ -474,7 +474,7 @@ strong {
             height: 20rem;
             justify-content: end;
             background:
-              url("../img/event_img_02.png") no-repeat left bottom/contain,
+              url("/img/event_img_02.png") no-repeat left bottom/contain,
               linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
               linear-gradient(0deg, #00fff228 1%, #22222270 10%);
 
@@ -501,7 +501,7 @@ strong {
             height: 20rem;
             justify-content: start;
             background:
-              url("../img/event_img_03_3.png") no-repeat right bottom/contain,
+              url("/img/event_img_03_3.png") no-repeat right bottom/contain,
               linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
               linear-gradient(0deg, #00fff228 1%, #22222270 10%);
     
@@ -535,7 +535,7 @@ strong {
             height: 30rem;
             justify-content: end;
             background:
-              url("../img/event_img_04.png") no-repeat center bottom/contain,
+              url("/img/event_img_04.png") no-repeat center bottom/contain,
               linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%),
               linear-gradient(0deg, #00fff228 1%, #22222220 10%);
               
@@ -582,7 +582,7 @@ footer {
   .logo {
     width: 100%;
     height: 1rem;
-    background: url("../img/logo.png") no-repeat left/contain;
+    background: url("/img/logo.png") no-repeat left/contain;
     margin-bottom: 1rem;
   }
 
