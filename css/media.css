@@ -141,7 +141,7 @@
   #agenda .event-group:nth-child(1) .inner .content .box {
     height: 45vw;
     justify-content: start;
-    background: url("/img/event_img_01.png") no-repeat right bottom/50vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_01.png") no-repeat right bottom/50vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(1) .inner .content .box .text-group {
     text-align: left;
@@ -156,7 +156,7 @@
   #agenda .event-group:nth-child(2) .inner .content .box {
     height: 45vw;
     justify-content: start;
-    background: url("/img/event_img_02.png") no-repeat right bottom/50vw, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_02.png") no-repeat right bottom/50vw, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(2) .inner .content .box .text-group {
     text-align: left;
@@ -171,7 +171,7 @@
   #agenda .event-group:nth-child(3) .inner .content .box {
     height: 45vw;
     justify-content: start;
-    background: url("/img/event_img_03_3.png") no-repeat right bottom/60vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_03_3.png") no-repeat right bottom/60vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(3) .inner .content .box .text-group {
     text-align: left;
@@ -192,7 +192,7 @@
     align-items: flex-start;
     height: 60vw;
     justify-content: start;
-    background: url("/img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
   }
   #agenda .event-group:nth-child(4) .inner .content .box .text-group {
     text-align: left;
@@ -702,7 +702,7 @@
   #agenda .event-group:nth-child(1) .inner .content .box {
     height: 14rem;
     justify-content: start;
-    background: url("/img/event_img_01.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_01.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(1) .inner .content .box .text-group {
     text-align: left;
@@ -717,7 +717,7 @@
   #agenda .event-group:nth-child(2) .inner .content .box {
     height: 14rem;
     justify-content: end;
-    background: url("/img/event_img_02.png") no-repeat left bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_02.png") no-repeat left bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(2) .inner .content .box .text-group {
     text-align: right;
@@ -732,7 +732,7 @@
   #agenda .event-group:nth-child(3) .inner .content .box {
     height: 14rem;
     justify-content: start;
-    background: url("/img/event_img_03_3.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_03_3.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(3) .inner .content .box .text-group {
     text-align: left;
@@ -754,7 +754,7 @@
     align-items: flex-start;
     height: 26rem;
     justify-content: end;
-    background: url("/img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
   }
   #agenda .event-group:nth-child(4) .inner .content .box .text-group {
     text-align: right;
@@ -982,7 +982,7 @@
   #agenda .event-group:nth-child(1) .inner .content .box {
     height: 20rem;
     justify-content: start;
-    background: url("/img/event_img_01.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_01.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(1) .inner .content .box .text-group {
     text-align: left;
@@ -997,7 +997,7 @@
   #agenda .event-group:nth-child(2) .inner .content .box {
     height: 20rem;
     justify-content: end;
-    background: url("/img/event_img_02.png") no-repeat left bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_02.png") no-repeat left bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(2) .inner .content .box .text-group {
     text-align: right;
@@ -1012,7 +1012,7 @@
   #agenda .event-group:nth-child(3) .inner .content .box {
     height: 20rem;
     justify-content: start;
-    background: url("/img/event_img_03_3.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+    background: url("../img/event_img_03_3.png") no-repeat right bottom/contain, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(3) .inner .content .box .text-group {
     text-align: left;
@@ -1034,7 +1034,7 @@
     align-items: flex-start;
     height: 30rem;
     justify-content: end;
-    background: url("/img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
   }
   #agenda .event-group:nth-child(4) .inner .content .box .text-group {
     text-align: right;
