@@ -492,4 +492,13 @@ footer .text-group p a {
   text-decoration: none;
 }
 
+@keyframes scroll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

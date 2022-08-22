@@ -116,6 +116,7 @@ strong {
   // border: 1px solid #fff5;
 }
 
+
 // SPEAKERS 썸네일
 .img-chungang {
   background: url('../img/speakers-thumb/img-chungang.png') no-repeat center center / cover;
@@ -231,7 +232,7 @@ strong {
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
-
+    
     &:last-child {
       margin-bottom: 0;
     }
@@ -605,4 +606,14 @@ footer {
       }
     }
   }
+}
+
+
+@keyframes scroll {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

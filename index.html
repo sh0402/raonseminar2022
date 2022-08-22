@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 
 <body>
@@ -61,7 +65,7 @@
     <div class="container">
 
       <div class="agenda-group">
-        <div class="info-group">
+        <div class="info-group" data-aos="fade-up">
           <p>
             전 세계적으로 확산되고 있는 산업 전반의 디지털 전환에 따라<br>
             가상 공간에서 ‘내가 나’임을 증명해야 하는 디지털 인증 시대가 열렸습니다.<br>
@@ -78,7 +82,7 @@
         </div>
       </div>
 
-      <div class="agenda-group">
+      <div class="agenda-group" data-aos="fade-up">
         <h1 class="mint-color">
           - SPEAKERS -
         </h1>
@@ -137,7 +141,7 @@
         </div>
       </div>
 
-      <div class="agenda-group">
+      <div class="agenda-group" data-aos="fade-up">
         <h1 class="mint-color">
           - AGENDA -
         </h1>
@@ -268,7 +272,7 @@
 
         <div class="event-container">
 
-          <div class="event-group">
+          <div class="event-group" data-aos="fade-up">
 
             <div class="inner">
               <span>
@@ -297,7 +301,7 @@
 
           </div>
 
-          <div class="event-group">
+          <div class="event-group" data-aos="fade-up">
             <div class="inner">
               <span>
                 사전등록 이벤트
@@ -326,7 +330,7 @@
             </div>
           </div>
 
-          <div class="event-group">
+          <div class="event-group" data-aos="fade-up">
             <div class="inner">
               <span>
                 현장 이벤트
@@ -355,7 +359,7 @@
             </div>
           </div>
 
-          <div class="event-group">
+          <div class="event-group" data-aos="fade-up">
             <div class="inner">
               <span>
                 현장 이벤트
@@ -394,7 +398,7 @@
         </button>
       </div>
 
-      <div class="agenda-group">
+      <div class="agenda-group" data-aos="fade-up">
         <h1 class="mint-color">
           - LOCATION -
 
@@ -564,6 +568,10 @@
     (function (fn) { var d = document; (d.readyState == 'loading') ? d.addEventListener('DOMContentLoaded', fn) : fn(); })(function () {
       matrix.init();
     });
+  </script>
+
+  <script>
+    AOS.init();
   </script>
 </body>
 
