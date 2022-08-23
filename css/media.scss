@@ -1,10 +1,12 @@
 @import url('./reset.css');
 
 // @media all and (min-width: 320px) {
-//   // button {
-//   //   padding: 2.5vw 9vw;
-//   //   font-size: 4.4vw;
-//   // }
+//   button {
+//     width: 70%;
+//     padding: 2.5vw;
+//     font-size: 5vw;
+//   }
+
 //   p {
 //     line-height: 1.4;
 //   }
@@ -15,15 +17,7 @@
 
 //   #main {
 //     height: 100vh;
-//     padding: 20vw 0;
-
-//     .container {
-//       height: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//     }
+//     padding: 10vw 0;
 
 //     .main_img {
 //       margin-bottom: 10vw;
@@ -35,7 +29,7 @@
 
 //     .title-group {
 //       h1 {
-//         font-size: 10vw;
+//         font-size: 7.5vw;
 //       }
 
 //       h5 {
@@ -63,7 +57,7 @@
 //   }
 
 //   #agenda {
-//     padding: 20vw 0;
+//     padding: 15vw 0;
 
 //     .background-image {
 //       overflow-x: hidden;
@@ -84,9 +78,12 @@
 
 //       .info-group {
 //         p {
-//           font-size: 5vw;
-//           text-align: left;
 //           margin-bottom: 3.8vw;
+
+//           span {
+//             font-size: 5vw;
+//             text-align: left;
+//           }
 
 //           &:last-child {
 //             margin-bottom: 0;
@@ -114,6 +111,8 @@
 //     }
 
 //     .swiper {
+//       padding: 0;
+
 //       .swiper-slide {
 //         .item-group {
 
@@ -185,7 +184,7 @@
 
 //               p {
 //                 font-size: 2.5vw;
-//                 margin-bottom: 2.2vw;
+//                 margin-bottom: 2.5vw;
 
 //                 &:nth-child(1) {
 //                   font-size: 4.4vw;
@@ -197,27 +196,105 @@
 //         }
 //       }
 
-//       &:nth-child(1),
-//       &:nth-child(2),
-//       &:nth-child(3) {
+//       &:nth-child(1) {
 //         .inner {
 //           .content {
+//             >p {
+//               background: linear-gradient(to right, #12beff, #00fff2);
+//             }
+
 //             .box {
 //               height: 45vw;
+//               justify-content: start;
+//               background: url('../img/event_img_01.png') no-repeat right bottom/50vw,
+//                 linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
+//                 linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+//               .text-group {
+//                 text-align: left;
+//               }
+//             }
+//           }
+//         }
+//       }
+
+//       &:nth-child(2) {
+//         justify-content: start;
+//         text-align: left;
+
+//         .inner {
+//           .content {
+//             >p {
+//               background: linear-gradient(to right, #12beff, #00fff2);
+//             }
+
+//             .box {
+//               height: 45vw;
+//               justify-content: start;
+//               background: url('../img/event_img_02.png') no-repeat right bottom/50vw,
+//                 linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+//                 linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+//               .text-group {
+//                 text-align: left;
+//               }
+//             }
+//           }
+//         }
+//       }
+
+//       &:nth-child(3) {
+//         justify-content: start;
+//         text-align: left;
+
+//         .inner {
+//           .content {
+//             >p {
+//               background: linear-gradient(to right, #8631ff, #b17bff);
+//             }
+
+//             .box {
+//               height: 45vw;
+//               justify-content: start;
+//               background: url('../img/event_img_03_3.png') no-repeat right bottom/60vw,
+//                 linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
+//                 linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+//               .text-group {
+//                 text-align: left;
+//               }
 //             }
 //           }
 //         }
 //       }
 
 //       &:nth-child(4) {
+//         justify-content: start;
+//         text-align: left;
+
 //         .inner {
-//           > p {
+//           >p {
 //             margin-top: 3.8vw;
 //             font-size: 2.5vw;
 //           }
+
 //           .content {
+//             >p {
+//               background: linear-gradient(180deg);
+//             }
+
 //             .box {
-//               height: 65vw;
+//               height: 60vw;
+//               align-items: flex-start;
+//               justify-content: start;
+//               background:
+//                 url('../img/event_img_04.png') no-repeat center bottom/contain,
+//                 linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+//                 linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+//               .text-group {
+//                 text-align: left;
+//               }
 //             }
 //           }
 //         }
@@ -263,337 +340,9 @@
 //   }
 // }
 
-@media all and (max-width: 768px) {
-  // button {
-  //   padding: 2.5vw 9vw;
-  //   font-size: 4.4vw;
-  // }
 
-  p {
-    line-height: 1.4;
-  }
 
-  .container {
-    padding: 0 6.25vw;
-  }
-
-  #main {
-    height: 100vh;
-    padding: 12.5vw 0;
-
-    .main_img {
-      margin-bottom: 8.3vw;
-
-      img {
-        width: 32vw;
-      }
-    }
-
-    .title-group {
-      h1 {
-        font-size: 6.25vw;
-      }
-
-      h5 {
-        font-size: 3.125vw;
-      }
-    }
-
-    .info-text {
-      .text-group {
-        .item {
-          margin-bottom: 2vw;
-        }
-
-        .radius-box {
-          font-size: 2.6vw;
-          padding: 1.04vw 2vw;
-          width: 22.5vw;
-        }
-
-        p {
-          font-size: 2.6vw;
-        }
-      }
-    }
-  }
-
-  #agenda {
-    padding: 12.5vw 0;
-
-    .background-image {
-      overflow-x: hidden;
-
-      img.human-img {
-        width: 37.5vw;
-      }
-    }
-
-    .agenda-group {
-      margin-bottom: 13.3vw;
-
-      >span {
-        font-size: 2vw;
-        margin-top: 3.125vw;
-        text-align: left;
-      }
-
-      .info-group {
-        p {
-          margin-bottom: 2.6vw;
-          text-align: left;
-
-          span {
-            font-size: 3.125vw;
-            margin-bottom: 3.125vw;
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-          
-          br {
-            display: none;
-          }
-        }
-      }
-
-      h1 {
-        font-size: 5vw;
-        margin-bottom: 6.25vw;
-
-        p {
-          font-size: 3.125vw;
-          margin-top: 3.125vw;
-        }
-      }
-    }
-
-    .swiper {
-      padding: 0;
-
-      .swiper-slide {
-        .item-group {
-          .img-box {
-            width: 45vw;
-            height: 45vw;
-            margin-bottom: 5vw;
-          }
-
-          p {
-            font-size: 3.125vw;
-          }
-        }
-      }
-    }
-
-    table {
-
-      tbody th,
-      tbody td {
-        font-size: 2.6vw;
-        border-top: 1px solid #eee;
-      }
-
-      tbody th {
-        vertical-align: top;
-      }
-
-      tbody td {
-        vertical-align: top;
-
-        &:nth-of-type(1),
-        &:nth-of-type(2) {
-          .radius-box {
-            width: 100%;
-            padding: 1.56vw;
-          }
-        }
-
-        br {
-          display: none;
-        }
-      }
-    }
-
-    .event-group {
-      margin-bottom: 5vw;
-
-      .inner {
-        width: 100%;
-
-        span {
-          padding: 0 3.125vw;
-          margin-bottom: 2.6vw;
-          font-size: 2vw;
-        }
-
-        .content {
-          >p {
-            font-size: 2.6vw;
-            padding: 1.56vw 3.125vw;
-          }
-
-          .box {
-            .text-group {
-              margin: 3.8vw;
-
-              p {
-                font-size: 2.6vw;
-                margin-bottom: 1.56vw;
-
-                &:nth-child(1) {
-                  font-size: 4.16vw;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      &:nth-child(1) {
-        .inner {
-          .content {
-            >p {
-              background: linear-gradient(to right, #12beff, #00fff2);
-            }
-
-            .box {
-              height: 45vw;
-              justify-content: start;
-              background: url('../img/event_img_01.png') no-repeat right bottom/50vw,
-                linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
-                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
-
-              .text-group {
-                text-align: left;
-              }
-            }
-          }
-        }
-      }
-
-      &:nth-child(2) {
-        justify-content: start;
-        text-align: left;
-
-        .inner {
-          .content {
-            >p {
-              background: linear-gradient(to right, #12beff, #00fff2);
-            }
-
-            .box {
-              height: 45vw;
-              justify-content: start;
-              background: url('../img/event_img_02.png') no-repeat right bottom/50vw,
-                linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
-                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
-
-              .text-group {
-                text-align: left;
-              }
-            }
-          }
-        }
-      }
-
-      &:nth-child(3) {
-        justify-content: start;
-        text-align: left;
-
-        .inner {
-          .content {
-            >p {
-              background: linear-gradient(to right, #8631ff, #b17bff);
-            }
-
-            .box {
-              height: 45vw;
-              justify-content: start;
-              background: url('../img/event_img_03_3.png') no-repeat right bottom/60vw,
-                linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
-                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
-
-              .text-group {
-                text-align: left;
-              }
-            }
-          }
-        }
-      }
-
-      &:nth-child(4) {
-        justify-content: start;
-        text-align: left;
-
-        .inner {
-          >p {
-            margin-top: 2.6vw;
-            font-size: 2vw;
-          }
-
-          .content {
-            >p {
-              background: linear-gradient(180deg);
-            }
-
-            .box {
-              height: 65vw;
-              align-items: flex-start;
-              justify-content: start;
-              background:
-                url('../img/event_img_04.png') no-repeat center bottom/contain,
-                linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
-                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
-
-              .text-group {
-                text-align: left;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .location-group {
-      .inner {
-        padding: 2.6vw;
-      }
-
-      p {
-        margin-bottom: 2.6vw;
-        font-size: 2vw;
-      }
-    }
-  }
-
-  footer {
-    .container {
-      padding: 8.3vw 6.25vw;
-    }
-
-    .logo {
-      width: 100%;
-      height: 3.125vw;
-      margin-bottom: 2vw;
-    }
-
-    .text-group {
-
-      p {
-        margin-bottom: 2vw;
-        font-size: 2vw;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-@media all and (max-width:1024px) {
+@media all and (max-width: 1024px) {
   button {
     font-size: 1.56vw;
     padding: 1.56vw 6.25vw;
@@ -911,6 +660,336 @@
       p {
         margin-bottom: 1.95vw;
         font-size: 1.95vw;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  // button {
+  //   padding: 2.5vw 9vw;
+  //   font-size: 4.4vw;
+  // }
+
+  p {
+    line-height: 1.4;
+  }
+
+  .container {
+    padding: 0 6.25vw;
+  }
+
+  #main {
+    height: 100vh;
+    padding: 12.5vw 0;
+
+    .main_img {
+      margin-bottom: 8.3vw;
+
+      img {
+        width: 32vw;
+      }
+    }
+
+    .title-group {
+      h1 {
+        font-size: 7.5vw;
+      }
+
+      h5 {
+        font-size: 5vw;
+      }
+    }
+
+    .info-text {
+      .text-group {
+        .item {
+          margin-bottom: 2vw;
+        }
+
+        .radius-box {
+          font-size: 2.6vw;
+          padding: 1.04vw 2vw;
+          width: 22.5vw;
+        }
+
+        p {
+          font-size: 2.6vw;
+        }
+      }
+    }
+  }
+
+  #agenda {
+    padding: 12.5vw 0;
+
+    .background-image {
+      overflow-x: hidden;
+
+      img.human-img {
+        width: 37.5vw;
+      }
+    }
+
+    .agenda-group {
+      margin-bottom: 13.3vw;
+
+      >span {
+        font-size: 2vw;
+        margin-top: 3.125vw;
+        text-align: left;
+      }
+
+      .info-group {
+        p {
+          margin-bottom: 2.6vw;
+          text-align: left;
+
+          span {
+            font-size: 3.125vw;
+            margin-bottom: 3.125vw;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          
+          br {
+            display: none;
+          }
+        }
+      }
+
+      h1 {
+        font-size: 5vw;
+        margin-bottom: 6.25vw;
+
+        p {
+          font-size: 3.125vw;
+          margin-top: 3.125vw;
+        }
+      }
+    }
+
+    .swiper {
+      padding: 0;
+
+      .swiper-slide {
+        .item-group {
+          .img-box {
+            width: 45vw;
+            height: 45vw;
+            margin-bottom: 5vw;
+          }
+
+          p {
+            font-size: 3.125vw;
+          }
+        }
+      }
+    }
+
+    table {
+
+      tbody th,
+      tbody td {
+        font-size: 2.6vw;
+        border-top: 1px solid #eee;
+      }
+
+      tbody th {
+        vertical-align: top;
+      }
+
+      tbody td {
+        vertical-align: top;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          .radius-box {
+            width: 100%;
+            padding: 1.56vw;
+          }
+        }
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .event-group {
+      margin-bottom: 5vw;
+
+      .inner {
+        width: 100%;
+
+        span {
+          padding: 0 3.125vw;
+          margin-bottom: 2.6vw;
+          font-size: 2vw;
+        }
+
+        .content {
+          >p {
+            font-size: 2.6vw;
+            padding: 1.56vw 3.125vw;
+          }
+
+          .box {
+            .text-group {
+              margin: 3.8vw;
+
+              p {
+                font-size: 2.6vw;
+                margin-bottom: 1.56vw;
+
+                &:nth-child(1) {
+                  font-size: 4.16vw;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        .inner {
+          .content {
+            >p {
+              background: linear-gradient(to right, #12beff, #00fff2);
+            }
+
+            .box {
+              height: 45vw;
+              justify-content: start;
+              background: url('../img/event_img_01.png') no-repeat right bottom/50vw,
+                linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
+                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+              .text-group {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        justify-content: start;
+        text-align: left;
+
+        .inner {
+          .content {
+            >p {
+              background: linear-gradient(to right, #12beff, #00fff2);
+            }
+
+            .box {
+              height: 45vw;
+              justify-content: start;
+              background: url('../img/event_img_02.png') no-repeat right bottom/50vw,
+                linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+              .text-group {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        justify-content: start;
+        text-align: left;
+
+        .inner {
+          .content {
+            >p {
+              background: linear-gradient(to right, #8631ff, #b17bff);
+            }
+
+            .box {
+              height: 45vw;
+              justify-content: start;
+              background: url('../img/event_img_03_3.png') no-repeat right bottom/60vw,
+                linear-gradient(90deg, #00fff228 0.5%, #22222270 5%),
+                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+              .text-group {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        justify-content: start;
+        text-align: left;
+
+        .inner {
+          >p {
+            margin-top: 2.6vw;
+            font-size: 2vw;
+          }
+
+          .content {
+            >p {
+              background: linear-gradient(180deg);
+            }
+
+            .box {
+              height: 65vw;
+              align-items: flex-start;
+              justify-content: start;
+              background:
+                url('../img/event_img_04.png') no-repeat center bottom/contain,
+                linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+
+              .text-group {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .location-group {
+      .inner {
+        padding: 2.6vw;
+      }
+
+      p {
+        margin-bottom: 2.6vw;
+        font-size: 2vw;
+      }
+    }
+  }
+
+  footer {
+    .container {
+      padding: 8.3vw 6.25vw;
+    }
+
+    .logo {
+      width: 100%;
+      height: 3.125vw;
+      margin-bottom: 2vw;
+    }
+
+    .text-group {
+
+      p {
+        margin-bottom: 2vw;
+        font-size: 2vw;
 
         &:last-child {
           margin-bottom: 0;
