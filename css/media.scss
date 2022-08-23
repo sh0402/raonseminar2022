@@ -318,8 +318,6 @@
     }
 
     .text-group {
-      flex-direction: column;
-      align-items: flex-start;
 
       p {
         font-size: 3.8vw;
@@ -1145,7 +1143,6 @@
   }
 
   footer {
-    display: flex;
 
     .container {
       padding: 3rem 4rem;
@@ -1157,9 +1154,6 @@
     }
   
     .text-group {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
 
       p {
         font-size: 1rem;
@@ -1273,7 +1267,6 @@
           font-size: 1.5rem;
           line-height: 1.4;
           margin-bottom: 1rem;
-          font-weight: 600;
           text-align: center;
   
           &:last-child {
@@ -1544,25 +1537,35 @@
   }
 
   footer {
-    display: flex;
-
+    background: linear-gradient(#2b8ce1b5 2%, #7308C2 40%);
+  
     .container {
       padding: 3rem 7rem;
     }
     
     .logo {
-      height: 1rem;
+      width: 100%;
+      height: 1.5rem;
+      background: url('../img/logo.png') no-repeat left/contain;
       margin-bottom: 1rem;
     }
   
     .text-group {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       align-items: flex-end;
-
+      
       p {
+        color: #fff;
         font-size: 1rem;
-        margin-bottom: 0;
+        line-height: 1.4;
+        opacity: 0.6;
+  
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
       }
     }
   }

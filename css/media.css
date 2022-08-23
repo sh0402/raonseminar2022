@@ -211,10 +211,6 @@
     height: 4.4vw;
     margin-bottom: 3.8vw;
   }
-  footer .text-group {
-    flex-direction: column;
-    align-items: flex-start;
-  }
   footer .text-group p {
     font-size: 3.8vw;
     margin-bottom: 2.2vw;
@@ -772,20 +768,12 @@
     font-size: 0.75rem;
   }
 
-  footer {
-    display: flex;
-  }
   footer .container {
     padding: 3rem 4rem;
   }
   footer .logo {
     height: 1rem;
     margin-bottom: 1rem;
-  }
-  footer .text-group {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
   }
   footer .text-group p {
     font-size: 1rem;
@@ -872,7 +860,6 @@
     font-size: 1.5rem;
     line-height: 1.4;
     margin-bottom: 1rem;
-    font-weight: 600;
     text-align: center;
   }
   #agenda .agenda-group .info-group p:last-child {
@@ -1054,23 +1041,32 @@
   }
 
   footer {
-    display: flex;
+    background: linear-gradient(#2b8ce1b5 2%, #7308C2 40%);
   }
   footer .container {
     padding: 3rem 7rem;
   }
   footer .logo {
-    height: 1rem;
+    width: 100%;
+    height: 1.5rem;
+    background: url("../img/logo.png") no-repeat left/contain;
     margin-bottom: 1rem;
   }
   footer .text-group {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-end;
   }
   footer .text-group p {
+    color: #fff;
     font-size: 1rem;
-    margin-bottom: 0;
+    line-height: 1.4;
+    opacity: 0.6;
+  }
+  footer .text-group p a {
+    color: #fff;
+    text-decoration: none;
   }
 }
 

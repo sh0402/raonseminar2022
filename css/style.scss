@@ -6,8 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: 'AppleSDGothicNeo', 'Helvetica Neue', 'Noto Sans KR', Arial,
-    sans-serif !important;
+  font-family: 'Noto Sans KR',  Arial, sans-serif !important;
 }
 
 h1,
@@ -23,14 +22,13 @@ h5 {
 html, body {
   width: 100%;
   height: 100%;
+  font-family: 'Noto Sans KR',  Arial, sans-serif !important;
 }
 
 body {
   position: relative;
   background-color: black;
   color: white;
-  font-family: 'AppleSDGothicNeo', 'Helvetica Neue', 'Noto Sans KR', Arial,
-    sans-serif !important;
 }
 
 canvas {
@@ -372,20 +370,17 @@ strong {
   
           &:first-child {
             color: #00fff2;
-            font-weight: normal;
           }
 
           &:last-child{
             color: #fff;
-            font-weight: bold;
           }
         }
       }
 
       &:nth-of-type(2) {
         color: #fff;
-        font-weight: bold;
-  
+
         .radius-box {
           border: 1px solid #b17bff;
         }
@@ -395,12 +390,10 @@ strong {
 
           &:first-child {
             color: #b17bff;
-            font-weight: normal;
           }
   
           &:last-child {
             color: #fff;
-            font-weight: bold;
           }
         }
       }
@@ -601,7 +594,6 @@ strong {
 }
 
 footer {
-  display: flex;
   background: linear-gradient(#2b8ce1b5 2%, #7308C2 40%);
 
   .container {
@@ -610,23 +602,22 @@ footer {
   
   .logo {
     width: 100%;
-    height: 1rem;
+    height: 2rem;
     background: url('../img/logo.png') no-repeat left/contain;
     margin-bottom: 1rem;
   }
 
   .text-group {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-
+    
     p {
+      color: #fff;
       font-size: 1rem;
       line-height: 1.4;
-      
-      span {
-        opacity: 0.6;
-      }
+      opacity: 0.6;
 
       a {
         color: #fff;
@@ -634,14 +625,4 @@ footer {
       }
     }
   }
-}
-
-
-@keyframes scroll {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }
