@@ -17,6 +17,7 @@ h4,
 h5 {
   font-weight: bold;
   line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 html, body {
@@ -59,10 +60,11 @@ p {
   line-height: 1.6;
   padding: 0;
   margin: 0;
+  letter-spacing: -1px;
 }
 
 strong {
-  font-weight: bold;
+  font-weight: bolder !important;
 }
 
 .text-left {
@@ -288,9 +290,9 @@ strong {
       margin-bottom: 2rem;
 
       p {
-        font-size: 1.125rem;
-        line-height: 1.4;
-        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+          line-height: 1.4;
+          margin-bottom: 1rem;
 
         &:last-child {
           margin-bottom: 0;
@@ -323,6 +325,14 @@ strong {
         p {
           font-size: 1rem;
         }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      
+      &::after {
+        color: #00fff2;
       }
     }
   }
@@ -360,14 +370,21 @@ strong {
         p {
           color: #00fff2;
   
-          &:last-child {
+          &:first-child {
+            color: #00fff2;
+            font-weight: normal;
+          }
+
+          &:last-child{
             color: #fff;
+            font-weight: bold;
           }
         }
       }
 
       &:nth-of-type(2) {
         color: #fff;
+        font-weight: bold;
   
         .radius-box {
           border: 1px solid #b17bff;
@@ -375,9 +392,15 @@ strong {
   
         p {
           color: #b17bff;
+
+          &:first-child {
+            color: #b17bff;
+            font-weight: normal;
+          }
   
           &:last-child {
             color: #fff;
+            font-weight: bold;
           }
         }
       }
@@ -434,7 +457,6 @@ strong {
 
               &:nth-child(1) {
                 font-size: 2rem;
-                font-weight: bold;
               }
             }
           }
@@ -544,8 +566,8 @@ strong {
             justify-content: end;
             background:
               url('../img/event_img_04.png') no-repeat center bottom/contain,
-              linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%),
-              linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+              linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+              linear-gradient(0deg, #00fff228 1%, #22222270 10%);
               
             .text-group {
               text-align: right;

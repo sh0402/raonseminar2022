@@ -281,8 +281,8 @@
               justify-content: start;
               background: url('../img/event_img_04.png') no-repeat center
                   bottom/contain,
-                linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%),
-                linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+                linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
 
               .text-group {
                 text-align: left;
@@ -1120,8 +1120,8 @@
               justify-content: end;
               background:
                 url('../img/event_img_04.png') no-repeat center bottom/contain,
-                linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%),
-                linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+                linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
                 
               .text-group {
                 text-align: right;
@@ -1192,15 +1192,15 @@
     }
 
     .title-group {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
   
       h1 {
-        font-size: 4rem;
+        font-size: 5rem;
         margin-bottom: 0.5rem;
       }
   
       h5 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
     }
 
@@ -1273,6 +1273,7 @@
           font-size: 1.5rem;
           line-height: 1.4;
           margin-bottom: 1rem;
+          font-weight: 600;
           text-align: center;
   
           &:last-child {
@@ -1405,7 +1406,7 @@
               margin: 2rem;
   
               p {
-                font-size: 1rem;
+                font-size: 1.25rem;
   
                 &:nth-child(1) {
                   font-size: 2rem;
@@ -1502,7 +1503,7 @@
         .inner {
           > p {
             margin-top: 1rem;
-            font-size: 0.75rem;
+            font-size: 1rem;
             line-height: 1.4;
             opacity: 0.6;
           }
@@ -1518,8 +1519,8 @@
               justify-content: end;
               background:
                 url('../img/event_img_04.png') no-repeat center bottom/contain,
-                linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%),
-                linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+                linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%),
+                linear-gradient(0deg, #00fff228 1%, #22222270 10%);
                 
               .text-group {
                 text-align: right;
@@ -1537,7 +1538,7 @@
   
       p {
         margin-top: 2rem;
-        font-size: 0.75rem;
+        font-size: 1rem;
       }
     }
   }

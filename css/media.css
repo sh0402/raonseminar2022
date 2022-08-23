@@ -189,7 +189,7 @@
     align-items: flex-start;
     height: 60vw;
     justify-content: start;
-    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(4) .inner .content .box .text-group {
     text-align: left;
@@ -759,7 +759,7 @@
     align-items: flex-start;
     height: 26rem;
     justify-content: end;
-    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(4) .inner .content .box .text-group {
     text-align: right;
@@ -810,14 +810,14 @@
     width: 300px;
   }
   #main .title-group {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   #main .title-group h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 0.5rem;
   }
   #main .title-group h5 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   #main .info-text .text-group .item {
     margin-bottom: 0.5rem;
@@ -872,6 +872,7 @@
     font-size: 1.5rem;
     line-height: 1.4;
     margin-bottom: 1rem;
+    font-weight: 600;
     text-align: center;
   }
   #agenda .agenda-group .info-group p:last-child {
@@ -972,7 +973,7 @@
     margin: 2rem;
   }
   #agenda .event-group .inner .content .box .text-group p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   #agenda .event-group .inner .content .box .text-group p:nth-child(1) {
     font-size: 2rem;
@@ -1028,7 +1029,7 @@
   }
   #agenda .event-group:nth-child(4) .inner > p {
     margin-top: 1rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     line-height: 1.4;
     opacity: 0.6;
   }
@@ -1039,7 +1040,7 @@
     align-items: flex-start;
     height: 30rem;
     justify-content: end;
-    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222220 5%), linear-gradient(0deg, #00fff228 1%, #22222220 10%);
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
   }
   #agenda .event-group:nth-child(4) .inner .content .box .text-group {
     text-align: right;
@@ -1049,7 +1050,7 @@
   }
   #agenda .location-group p {
     margin-top: 2rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   footer {
