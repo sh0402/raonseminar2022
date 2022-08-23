@@ -39,6 +39,9 @@
   #agenda .background-image {
     overflow-x: hidden;
   }
+  #agenda .background-image img.human-img {
+    width: 37.5vw;
+  }
   #agenda .agenda-group {
     margin-bottom: 15vw;
   }
