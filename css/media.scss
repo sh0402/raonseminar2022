@@ -147,6 +147,10 @@
             width: fit-content;
           }
         }
+
+        br {
+          display: none;
+        }
       }
     }
 
@@ -976,6 +980,10 @@
               color: #fff;
             }
           }
+        }
+
+        br {
+          display: block;
         }
       }
     }

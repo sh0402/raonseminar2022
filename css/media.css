@@ -107,6 +107,9 @@
     padding: 2.5vw 10vw;
     width: fit-content;
   }
+  #agenda table tbody td br {
+    display: none;
+  }
   #agenda .event-group {
     margin-bottom: 5vw;
   }
@@ -665,6 +668,9 @@
   }
   #agenda table tbody td:nth-of-type(2) p:last-child {
     color: #fff;
+  }
+  #agenda table tbody td br {
+    display: block;
   }
   #agenda .event-group {
     margin-bottom: 2rem;
