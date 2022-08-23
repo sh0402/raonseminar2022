@@ -1,10 +1,15 @@
 @import url("./reset.css");
 @media all and (max-width: 768px) {
+  p {
+    line-height: 1.4;
+  }
+
   .container {
     padding: 0 6.25vw;
   }
 
   #main {
+    height: 100vh;
     padding: 12.5vw 0;
   }
   #main .main_img {
@@ -49,18 +54,18 @@
     text-align: left;
   }
   #agenda .agenda-group .info-group p {
-    font-size: 3.125vw;
+    margin-bottom: 2.6vw;
     text-align: left;
+  }
+  #agenda .agenda-group .info-group p span {
+    font-size: 3.125vw;
     margin-bottom: 3.125vw;
   }
-  #agenda .agenda-group .info-group p:last-child {
+  #agenda .agenda-group .info-group p span:last-child {
     margin-bottom: 0;
   }
   #agenda .agenda-group .info-group p br {
     display: none;
-  }
-  #agenda .agenda-group .info-group button {
-    margin-top: 8.3vw;
   }
   #agenda .agenda-group h1 {
     font-size: 5vw;
@@ -170,7 +175,7 @@
     text-align: left;
   }
   #agenda .event-group:nth-child(4) .inner > p {
-    margin-top: 3.125vw;
+    margin-top: 2.6vw;
     font-size: 2vw;
   }
   #agenda .event-group:nth-child(4) .inner .content > p {
@@ -186,26 +191,241 @@
     text-align: left;
   }
   #agenda .location-group .inner {
-    padding: 2.5vw;
+    padding: 2.6vw;
   }
   #agenda .location-group p {
-    margin-top: 3.8vw;
-    font-size: 2.5vw;
-    line-height: 1.4;
+    margin-bottom: 2.6vw;
+    font-size: 2vw;
   }
 
   footer .container {
-    padding: 8.3vw 5vw;
+    padding: 8.3vw 6.25vw;
   }
   footer .logo {
     width: 100%;
-    height: 4.4vw;
-    margin-bottom: 3.8vw;
+    height: 3.125vw;
+    margin-bottom: 2vw;
   }
   footer .text-group p {
-    font-size: 3.8vw;
-    margin-bottom: 2.2vw;
-    line-height: 1.4;
+    margin-bottom: 2vw;
+    font-size: 2vw;
+  }
+  footer .text-group p:last-child {
+    margin-bottom: 0;
+  }
+}
+@media all and (max-width: 1024px) {
+  button {
+    font-size: 1.56vw;
+    padding: 1.56vw 6.25vw;
+    border-radius: 4.68vw;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  .container {
+    padding: 0 6.25vw;
+  }
+
+  #main {
+    padding: 12.5vw 0;
+  }
+  #main .main_img {
+    margin-bottom: 3.125vw;
+  }
+  #main .main_img img {
+    width: 20vw;
+  }
+  #main .title-group h1 {
+    font-size: 4.68vw;
+  }
+  #main .title-group h5 {
+    font-size: 2.34vw;
+  }
+  #main .info-text .text-group .item {
+    margin-bottom: 0.78vw;
+  }
+  #main .info-text .text-group .radius-box {
+    font-size: 1.56vw;
+    padding: 0.78vw;
+    width: 11.5vw;
+  }
+  #main .info-text .text-group p {
+    font-size: 1.56vw;
+  }
+
+  #agenda {
+    padding: 12.5vw 0;
+  }
+  #agenda .background-image {
+    overflow-x: hidden;
+  }
+  #agenda .background-image img.human-img {
+    width: 31.25vw;
+  }
+  #agenda .agenda-group {
+    margin-bottom: 9.375vw;
+  }
+  #agenda .agenda-group > span {
+    font-size: 2.34vw;
+    margin-top: 2.34vw;
+    text-align: left;
+  }
+  #agenda .agenda-group .info-group p {
+    margin-bottom: 4.68vw;
+  }
+  #agenda .agenda-group .info-group p span {
+    font-size: 1.95vw;
+    margin-bottom: 1.95vw;
+  }
+  #agenda .agenda-group .info-group p span:last-child {
+    margin-bottom: 0;
+  }
+  #agenda .agenda-group .info-group p br {
+    display: block;
+  }
+  #agenda .agenda-group h1 {
+    font-size: 3.125vw;
+    margin-bottom: 4.68vw;
+  }
+  #agenda .agenda-group h1 p {
+    font-size: 1.95vw;
+    margin-top: 1.95vw;
+  }
+  #agenda .swiper {
+    padding: 0 7.81vw;
+  }
+  #agenda .swiper .swiper-slide .item-group .img-box {
+    width: 18.75vw;
+    height: 18.75vw;
+    margin-bottom: 3.125vw;
+  }
+  #agenda .swiper .swiper-slide .item-group p {
+    font-size: 1.95vw;
+  }
+  #agenda table tbody th,
+#agenda table tbody td {
+    font-size: 1.95vw;
+  }
+  #agenda table tbody th {
+    vertical-align: top;
+  }
+  #agenda table tbody td {
+    vertical-align: top;
+  }
+  #agenda table tbody td:nth-of-type(1) .radius-box, #agenda table tbody td:nth-of-type(2) .radius-box {
+    width: 50%;
+    padding: 0.78vw 4.68vw;
+  }
+  #agenda table tbody td br {
+    display: none;
+  }
+  #agenda .event-group {
+    margin-bottom: 6.25vw;
+  }
+  #agenda .event-group .inner {
+    width: 100%;
+  }
+  #agenda .event-group .inner span {
+    padding: 0 3.125vw;
+    margin-bottom: 2.34vw;
+    font-size: 2.34vw;
+  }
+  #agenda .event-group .inner .content > p {
+    font-size: 2.34vw;
+    padding: 1.56vw 3.125vw;
+  }
+  #agenda .event-group .inner .content .box .text-group {
+    margin: 3.125vw;
+  }
+  #agenda .event-group .inner .content .box .text-group p {
+    font-size: 2.34vw;
+    margin-bottom: 1.56vw;
+  }
+  #agenda .event-group .inner .content .box .text-group p:nth-child(1) {
+    font-size: 4.68vw;
+  }
+  #agenda .event-group:nth-child(1) .inner .content > p {
+    background: linear-gradient(to right, #12beff, #00fff2);
+  }
+  #agenda .event-group:nth-child(1) .inner .content .box {
+    height: 35vw;
+    justify-content: start;
+    background: url("../img/event_img_01.png") no-repeat right bottom/50vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(1) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(2) {
+    justify-content: start;
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(2) .inner .content > p {
+    background: linear-gradient(to right, #12beff, #00fff2);
+  }
+  #agenda .event-group:nth-child(2) .inner .content .box {
+    height: 35vw;
+    justify-content: start;
+    background: url("../img/event_img_02.png") no-repeat right bottom/50vw, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(2) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(3) {
+    justify-content: start;
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(3) .inner .content > p {
+    background: linear-gradient(to right, #8631ff, #b17bff);
+  }
+  #agenda .event-group:nth-child(3) .inner .content .box {
+    height: 35vw;
+    justify-content: start;
+    background: url("../img/event_img_03_3.png") no-repeat right bottom/60vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(3) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(4) {
+    justify-content: start;
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(4) .inner > p {
+    margin-top: 2.34vw;
+    font-size: 1.95vw;
+  }
+  #agenda .event-group:nth-child(4) .inner .content > p {
+    background: linear-gradient(180deg);
+  }
+  #agenda .event-group:nth-child(4) .inner .content .box {
+    height: 55vw;
+    align-items: flex-start;
+    justify-content: start;
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(4) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .location-group .inner {
+    padding: 2.34vw;
+  }
+  #agenda .location-group p {
+    margin-bottom: 2.34vw;
+    font-size: 1.95vw;
+  }
+
+  footer .container {
+    padding: 4.68vw 6.25vw;
+  }
+  footer .logo {
+    height: 3.125vw;
+    margin-bottom: 1.95vw;
+  }
+  footer .text-group p {
+    margin-bottom: 1.95vw;
+    font-size: 1.95vw;
   }
   footer .text-group p:last-child {
     margin-bottom: 0;
