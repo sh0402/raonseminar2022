@@ -385,8 +385,7 @@ strong {
     border-collapse: collapse;
 
     tbody tr {
-      border-top: 0.5px solid #eee;
-      border-bottom: 0.5px solid #eee;
+      border-top: 1px solid #eee;
 
       &:last-child {
         border-bottom: 0;

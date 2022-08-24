@@ -313,10 +313,10 @@
     font-size: 3.125vw;
   }
   #agenda table tbody tr {
-    border-top: 0.5px solid #eee;
+    border-top: 1px solid #eee;
   }
   #agenda table tbody tr:last-child {
-    border-bottom: 0.5px solid #eee;
+    border-bottom: 1px solid #eee;
   }
   #agenda table tbody th,
 #agenda table tbody td {
@@ -550,10 +550,10 @@
     font-size: 3.75vw;
   }
   #agenda table tbody tr {
-    border-top: 0.5px solid #eee;
+    border-top: 1px solid #eee;
   }
   #agenda table tbody tr:last-child {
-    border-bottom: 0.5px solid #eee;
+    border-bottom: 1px solid #eee;
   }
   #agenda table tbody th,
 #agenda table tbody td {

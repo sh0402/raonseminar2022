@@ -352,8 +352,7 @@ strong {
   border-collapse: collapse;
 }
 #agenda table tbody tr {
-  border-top: 0.5px solid #eee;
-  border-bottom: 0.5px solid #eee;
+  border-top: 1px solid #eee;
 }
 #agenda table tbody tr:last-child {
   border-bottom: 0;
