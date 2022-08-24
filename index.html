@@ -23,11 +23,16 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+  <link rel="stylesheet" href="//embed.typeform.com/next/css/popup.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script defer src="js/custom.js"></script>
+
 </head>
 
 <body>
@@ -60,6 +65,7 @@
           </div>
         </div>
       </div>
+
     </div>
     <canvas id="rain"></canvas>
   </section>
@@ -67,7 +73,7 @@
   <section id="agenda">
     <div class="container">
       <div class="agenda-group">
-        <div class="info-group" data-aos="fade-up" data-aos-duration="2500">
+        <div class="info-group" data-aos="fade-up" data-aos-duration="2000">
           <p>
             <span>
               전 세계적으로 확산되고 있는 산업 전반의 디지털 전환에 따라<br />
@@ -85,12 +91,15 @@
             </span>
           </p>
 
-          <button onclick="formLink()">사전 등록하기</button>
+          <button data-tf-popup="B6oGShcn" data-tf-size="70" data-tf-iframe-props="title=My typeform"
+            data-tf-medium="snippet">
+            사전 등록하기
+          </button>
         </div>
 
       </div>
 
-      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2500">
+      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="mint-color">- SPEAKERS -</h1>
 
         <div class="swiper">
@@ -146,7 +155,7 @@
         </div>
       </div>
 
-      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2500">
+      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="mint-color">- AGENDA -</h1>
 
         <table>
@@ -268,7 +277,7 @@
         </span>
       </div>
 
-      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2500">
+      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="mint-color">- EVENT -</h1>
 
         <div class="event-container">
@@ -365,12 +374,15 @@
           </div>
         </div>
 
-        <button onclick="formLink()" data-aos="fade-up" data-aos-duration="1000">
+
+        <button data-tf-popup="B6oGShcn" data-tf-size="70" data-tf-iframe-props="title=My typeform"
+          data-tf-medium="snippet" data-aos="fade-up" data-aos-duration="1000">
           사전 등록하기
         </button>
+
       </div>
 
-      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2500">
+      <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="mint-color">
           - LOCATION -
 
@@ -431,158 +443,61 @@
   </footer>
 
   <script>
-    const swiper = new Swiper(".swiper", {
-      autoplay: false,
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        // 화면의 넓이가 320px 이상일 때
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 32,
-        },
-        // 화면의 넓이가 640px 이상일 때
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 32,
-        },
-
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 96,
-        },
-
-        1280: {
-          slidesPerView: 3,
-          spaceBetween: 80,
-        },
-      },
-    });
-  </script>
-
-  <script>
-    var matrix = (function () {
-      var init = function () {
-        document.body.style.background = "black";
-        var mdr = document.createElement("canvas");
-
-        document.body.prepend(mdr);
-
-        var ctx = mdr.getContext("2d");
-
-        //
-        var mainBg = document.getElementById("main");
-
-        mdr.height = mainBg.offsetHeight;
-        mdr.width = mainBg.offsetWidth;
-
-        //making the canvas full screen
-        // mdr.height = window.innerHeight;
-        // mdr.width = window.innerWidth;
-
-        //code characters - taken from the unicode charset
-        var code = "0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0";
-        //converting the string into an array of single characters
-        code = code.split("");
-
-        var font_size = 24;
-        var columns = mdr.width / font_size; //number of columns for the rain
-        //an array of drops - one per column
-        var drops = [];
-        //x below is the x coordinate
-        //1 = y co-ordinate of the drop(same for every drop initially)
-        for (var x = 0; x < columns; x++) {
-          drops[x] = 400;
-        }
-
-        window.addEventListener("resize", function () {
-          window.requestAnimationFrame(function () {
-            mdr.height = window.innerHeight;
-            mdr.width = window.innerWidth;
-            columns = mdr.width / font_size;
-            for (var x = 0; x < columns; x++) {
-              drops[x] = 400;
-            }
-          });
-        });
-
-        //drawing the characters
-        var draw = function () {
-          //Black BG for the canvas
-          //translucent BG to show trail
-          ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
-          ctx.fillRect(0, 0, mdr.width, mdr.height);
-
-          ctx.fillStyle = "#00fff23e"; //text color
-          ctx.font = font_size + "px arial";
-          //looping over drops
-          for (var i = 0; i < drops.length; i++) {
-            //a random code character to print
-            var text = code[Math.floor(Math.random() * code.length)];
-            //x = i*font_size, y = value of drops[i]*font_size
-            ctx.fillText(text, i * font_size, drops[i] * font_size);
-
-            //sending the drop back to the top randomly after it has crossed the screen
-            //adding a randomness to the reset to make the drops scattered on the Y axis
-            if (drops[i] * font_size > mdr.height && Math.random() > 0.975) {
-              //if(Math.random() > 0.975) {
-              drops[i] = 0;
-            }
-
-            //incrementing Y coordinate
-            drops[i]++;
-          }
-        };
-
-        setInterval(function () {
-          window.requestAnimationFrame(draw);
-        }, 60);
-      };
-
-      return {
-        init: init,
-      };
-    })();
-
-    // init on dom ready
-    (function (fn) {
-      var d = document;
-      d.readyState == "loading"
-        ? d.addEventListener("DOMContentLoaded", fn)
-        : fn();
-    })(function () {
-      matrix.init();
-    });
-  </script>
-
-  <script>
-    window.onscroll = onScroll;
-
-    function onScroll() {
-      var scroll_h =
-        100 *
-        (document.documentElement.scrollTop /
-          (document.documentElement.scrollHeight -
-            document.documentElement.clientHeight));
-      document.querySelector(".main_img").style.setProperty("--percentage", scroll_h + "%");
-    }
-    onScroll();
-  </script>
-
-  <script>
-    AOS.init();
-  </script>
-
-  <script>
     function formLink() {
       alert('추후 폼 연결')
     }
   </script>
+
+  <!-- <script>
+    const html = document.documentElement;
+    const canvas = document.getElementById("hero-move");
+    const context = canvas.getContext("2d");
+
+    const frameCount = 250;
+    const currentFrame = index => (
+      `img/hero-move/Comp 1_${index.toString().padStart(5, '0')}.png`
+    )
+
+    const preloadImages = () => {
+      for (let i = 1; i < frameCount; i++) {
+        const img = new Image();
+        img.src = currentFrame(i);
+      }
+    };
+
+    const img = new Image()
+
+    img.src = currentFrame(1);
+    canvas.width = 1158;
+    canvas.height = 770;
+    img.onload = function () {
+      context.drawImage(img, 0, 0);
+    }
+
+    const updateImage = index => {
+      img.src = currentFrame(index);
+      context.drawImage(img, 0, 0);
+    }
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = html.scrollTop;
+      const maxScrollTop = html.scrollHeight - window.innerHeight;
+      const scrollFraction = scrollTop / maxScrollTop;
+      const frameIndex = Math.min(
+        frameCount - 1,
+        Math.ceil(scrollFraction * frameCount)
+      );
+
+      requestAnimationFrame(() => updateImage(frameIndex + 1))
+    });
+
+    preloadImages()
+  </script> -->
+
+  <script src="//embed.typeform.com/next/embed.js"></script>
+
+
+
 </body>
 
 </html>
