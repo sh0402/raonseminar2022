@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Interection</title>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <style>
+    html {}
+
+    body {
+      position: relative;
+    }
+
+    .box {
+      position: relative;
+      height: 500px;
+    }
+
+    .box h2 {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    .fix_motion {
+      height: 7000px;
+    }
+
+    .fix_motion .fix_wrap {
+      overflow: hidden;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .fix_motion .fix_wrap .cont_box {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+    }
+
+    .fix_motion .fix_wrap .cont_box .canvas_wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .fix_motion .fix_wrap .cont_box .canvas_wrap canvas {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .fix_motion .fix_wrap .cont_box .canvas_wrap .no_canvas {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1920px;
+      height: 1080px;
+    }
+
+    .txt {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <section class="box">
+      <h2>FIXED CONTENT</h2>
+    </section>
+
+    <section class="fix_motion">
+      <article class="fix_wrap">
+        <div class="cont_box">
+          <div class="canvas_wrap">
+            <figure class="no_canvas">
+              <img src="../img/hero-move/39.png" alt="">
+            </figure>
+          </div>
+          <p class="txt pos1 active">
+            text 01
+          </p>
+          <p class="txt pos2 active">
+            text 02
+          </p>
+          <p class="txt pos3 active">
+            text 03
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="box"></section>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+
+      var canvas = document.createElement('canvas');
+      var ctx = canvas.getContext('2d');
+      var el = document.querySelector('.canvas_wrap');
+      var imgLength = 250;
+      var imgSrc = '../img/hero-move/';
+      var imgFormat = '.png';
+      var imgArray = [];
+      var imageIterlator = 0;
+      var scrollBody = $('.fix_motion');
+      var scrollHeight;
+      var scrollRealHeight;
+      var winScrollTop;
+      var sectionOffsetTop;
+      var sectionScrollTop;
+      var scrollPercent;
+      var percent;
+      var imgWidth;
+      var imgHeight;
+
+      function setProperty() {
+        scrollHeight = scrollBody.height();
+        scrollRealHeight = scrollHeight - $(window).height();
+        winScrollTop = $(window).scrollTop();
+        sectionOffsetTop = scrollBody.offset().top;
+        sectionScrollTop = winScrollTop - sectionOffsetTop;
+        scrollPercent = sectionScrollTop / scrollRealHeight;
+        percent = scrollPercent * 100;
+        imgWidth = 1200 / 2;
+        imgHeight = 1624 / 2;
+      }
+
+      function setCanvas() {
+        canvas.width = imgWidth;
+        canvas.height = imgHeight;
+      }
+
+      function bindEvent() {
+        $(window).scroll(function () {
+          setProperty();
+          scrollFunc();
+        });
+      }
+
+      function scrollFunc() {
+        var sequence = Math.min(imgLength, Math.max(0, Number((imgLength * scrollPercent).toFixed(0))));
+        renderCanvas(sequence);
+      }
+
+      function renderCanvas(sequence) {
+        ctx.clearRect(0, 0, imgWidth, imgHeight);
+        ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight);
+        console.log(imgArray[sequence]);
+      }
+
+      function init() {
+        el.appendChild(canvas);
+
+        for (var i = 0; i <= imgLength; i++) {
+          var img = new Image();
+          var path = imgSrc + i + imgFormat;
+
+          img.src = path;
+          imgArray.push(img);
+
+          img.onload = function () {
+            imageIterlator += 1;
+
+            if (imageIterlator === imgLength) {
+              console.log('end load');
+              bindEvent();
+              setProperty();
+              setCanvas();
+              scrollFunc();
+              ctx.drawImage(img, 0, 0);
+            }
+          }
+        }
+      }
+
+      init();
+
+    })
+  </script>
+
+</body>
+
+</html>
