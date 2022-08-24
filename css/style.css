@@ -340,6 +340,7 @@ strong {
 #agenda .swiper .swiper-slide .item-group p {
   text-align: center;
   font-size: 1rem;
+  line-height: 1.6;
 }
 #agenda .swiper .swiper-button-next::after,
 #agenda .swiper .swiper-button-prev::after {
