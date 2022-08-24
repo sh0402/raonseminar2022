@@ -1,9 +1,10 @@
 @import url("./reset.css");
 @media all and (max-width: 1024px) {
   button {
-    font-size: 1.56vw;
-    padding: 1.56vw 6.25vw;
-    border-radius: 4.68vw;
+    width: 35%;
+    font-size: 1.95vw;
+    padding: 1.56vw;
+    border-radius: 10vw;
   }
 
   p {
@@ -21,10 +22,11 @@
     margin-bottom: 3.125vw;
   }
   #main .main_img img {
-    width: 20vw;
+    width: 25vw;
   }
   #main .title-group h1 {
     font-size: 4.68vw;
+    margin-bottom: 1.56vw;
   }
   #main .title-group h5 {
     font-size: 2.34vw;
@@ -33,12 +35,12 @@
     margin-bottom: 0.78vw;
   }
   #main .info-text .text-group .radius-box {
-    font-size: 1.56vw;
+    font-size: 1.95vw;
     padding: 0.78vw;
-    width: 11.5vw;
+    width: 15.6vw;
   }
   #main .info-text .text-group p {
-    font-size: 1.56vw;
+    font-size: 1.95vw;
   }
 
   #agenda {
@@ -54,9 +56,8 @@
     margin-bottom: 9.375vw;
   }
   #agenda .agenda-group > span {
-    font-size: 2.34vw;
-    margin-top: 2.34vw;
-    text-align: left;
+    font-size: 1.95vw;
+    margin-top: 1.95vw;
   }
   #agenda .agenda-group .info-group p {
     margin-bottom: 4.68vw;
@@ -217,6 +218,13 @@
   }
 }
 @media all and (max-width: 768px) {
+  button {
+    width: 50%;
+    padding: 2.6vw;
+    font-size: 3.125vw;
+    border-radius: 10vw;
+  }
+
   p {
     line-height: 1.4;
   }
@@ -230,27 +238,28 @@
     padding: 12.5vw 0;
   }
   #main .main_img {
-    margin-bottom: 8.3vw;
+    margin-bottom: 6.25vw;
   }
   #main .main_img img {
-    width: 32vw;
+    width: 35vw;
   }
   #main .title-group h1 {
     font-size: 7.5vw;
+    margin-bottom: 2vw;
   }
   #main .title-group h5 {
-    font-size: 5vw;
+    font-size: 4.16vw;
   }
   #main .info-text .text-group .item {
     margin-bottom: 2vw;
   }
   #main .info-text .text-group .radius-box {
-    font-size: 2.6vw;
+    font-size: 3.125vw;
     padding: 1.04vw 2vw;
     width: 22.5vw;
   }
   #main .info-text .text-group p {
-    font-size: 2.6vw;
+    font-size: 3.125vw;
   }
 
   #agenda {
@@ -266,12 +275,12 @@
     margin-bottom: 13.3vw;
   }
   #agenda .agenda-group > span {
-    font-size: 2vw;
+    font-size: 2.6vw;
     margin-top: 3.125vw;
     text-align: left;
   }
   #agenda .agenda-group .info-group p {
-    margin-bottom: 2.6vw;
+    margin-bottom: 8.3vw;
     text-align: left;
   }
   #agenda .agenda-group .info-group p span {
@@ -305,24 +314,24 @@
   }
   #agenda table tbody th,
 #agenda table tbody td {
-    font-size: 2.6vw;
-    border-top: 1px solid #eee;
+    font-size: 3.125vw;
   }
   #agenda table tbody th {
     vertical-align: top;
   }
   #agenda table tbody td {
     vertical-align: top;
+    padding-right: 1.56vw;
   }
   #agenda table tbody td:nth-of-type(1) .radius-box, #agenda table tbody td:nth-of-type(2) .radius-box {
-    width: 100%;
+    width: 80%;
     padding: 1.56vw;
   }
   #agenda table tbody td br {
     display: none;
   }
   #agenda .event-group {
-    margin-bottom: 5vw;
+    margin-bottom: 6.25vw;
   }
   #agenda .event-group .inner {
     width: 100%;
@@ -337,7 +346,7 @@
     padding: 1.56vw 3.125vw;
   }
   #agenda .event-group .inner .content .box .text-group {
-    margin: 3.8vw;
+    margin: 3.125vw;
   }
   #agenda .event-group .inner .content .box .text-group p {
     font-size: 2.6vw;
@@ -392,8 +401,8 @@
     text-align: left;
   }
   #agenda .event-group:nth-child(4) .inner > p {
-    margin-top: 2.6vw;
-    font-size: 2vw;
+    margin-top: 3.125vw;
+    font-size: 2.6vw;
   }
   #agenda .event-group:nth-child(4) .inner .content > p {
     background: linear-gradient(180deg);
@@ -411,8 +420,8 @@
     padding: 2.6vw;
   }
   #agenda .location-group p {
-    margin-bottom: 2.6vw;
-    font-size: 2vw;
+    margin-top: 3.125vw;
+    font-size: 2.6vw;
   }
 
   footer .container {
@@ -423,12 +432,250 @@
     height: 3.125vw;
     margin-bottom: 2vw;
   }
-  footer .text-group p {
-    margin-bottom: 2vw;
-    font-size: 2vw;
+  footer .text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
   }
-  footer .text-group p:last-child {
+  footer .text-group .text-item {
+    margin-bottom: 2.6vw;
+  }
+  footer .text-group .text-item:last-child {
     margin-bottom: 0;
+  }
+  footer .text-group p {
+    font-size: 2.6vw;
+  }
+}
+@media all and (max-width: 320px) {
+  button {
+    width: 70%;
+    padding: 2.5vw;
+    font-size: 5vw;
+    border-radius: 10vw;
+  }
+
+  p, span {
+    line-height: 1.4;
+  }
+
+  .container {
+    padding: 0 6.25vw;
+  }
+
+  #main {
+    height: 100vh;
+    padding: 10vw 0;
+  }
+  #main .main_img {
+    margin-bottom: 10vw;
+  }
+  #main .main_img img {
+    width: 32vw;
+  }
+  #main .title-group h1 {
+    font-size: 8.75vw;
+  }
+  #main .title-group h5 {
+    font-size: 5vw;
+  }
+  #main .info-text .text-group .item {
+    margin-bottom: 3.75vw;
+  }
+  #main .info-text .text-group .radius-box {
+    font-size: 3.75vw;
+    padding: 1.1vw 0;
+  }
+  #main .info-text .text-group p {
+    font-size: 3.75vw;
+  }
+
+  #agenda {
+    padding: 15vw 0;
+  }
+  #agenda .background-image {
+    overflow-x: hidden;
+  }
+  #agenda .background-image img.human-img {
+    width: 37.5vw;
+  }
+  #agenda .agenda-group {
+    margin-bottom: 15vw;
+  }
+  #agenda .agenda-group > span {
+    font-size: 3.75vw;
+    margin-top: 3.75vw;
+    text-align: left;
+  }
+  #agenda .agenda-group .info-group p {
+    margin-bottom: 3.75vw;
+  }
+  #agenda .agenda-group .info-group p span {
+    font-size: 5vw;
+    text-align: left;
+  }
+  #agenda .agenda-group .info-group p span:last-child {
+    margin-bottom: 0;
+  }
+  #agenda .agenda-group .info-group p br {
+    display: none;
+  }
+  #agenda .agenda-group .info-group button {
+    margin-top: 10vw;
+  }
+  #agenda .agenda-group h1 {
+    font-size: 5vw;
+    margin-bottom: 7.5vw;
+  }
+  #agenda .agenda-group h1 p {
+    font-size: 3.75vw;
+    margin-top: 3.75vw;
+  }
+  #agenda .swiper {
+    padding: 0;
+  }
+  #agenda .swiper .swiper-slide .item-group .img-box {
+    width: 45vw;
+    height: 45vw;
+    margin-bottom: 5.5vw;
+  }
+  #agenda .swiper .swiper-slide .item-group p {
+    font-size: 3.75vw;
+  }
+  #agenda table tbody tr:last-child {
+    border-bottom: 0.5px solid #eee;
+  }
+  #agenda table tbody th,
+#agenda table tbody td {
+    font-size: 3.75vw;
+    line-height: 1.6;
+  }
+  #agenda table tbody th {
+    vertical-align: top;
+  }
+  #agenda table tbody td {
+    vertical-align: top;
+  }
+  #agenda table tbody td:nth-of-type(1) .radius-box, #agenda table tbody td:nth-of-type(2) .radius-box {
+    width: 100%;
+    padding: 2.5vw;
+  }
+  #agenda table tbody td br {
+    display: none;
+  }
+  #agenda .event-group {
+    margin-bottom: 7.5vw;
+  }
+  #agenda .event-group .inner {
+    width: 100%;
+  }
+  #agenda .event-group .inner .content > p {
+    font-size: 3.75vw;
+    padding: 2.5vw 3.75vw;
+  }
+  #agenda .event-group .inner .content .box .text-group {
+    margin: 3.75vw;
+  }
+  #agenda .event-group .inner .content .box .text-group p {
+    font-size: 3.125vw;
+    margin-bottom: 3.125vw;
+  }
+  #agenda .event-group .inner .content .box .text-group p:nth-child(1) {
+    font-size: 5vw;
+    font-weight: bold;
+  }
+  #agenda .event-group:nth-child(1) .inner .content > p {
+    background: linear-gradient(to right, #12beff, #00fff2);
+  }
+  #agenda .event-group:nth-child(1) .inner .content .box {
+    height: 45vw;
+    justify-content: start;
+    background: url("../img/event_img_01.png") no-repeat right bottom/50vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(1) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(2) {
+    justify-content: start;
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(2) .inner .content > p {
+    background: linear-gradient(to right, #12beff, #00fff2);
+  }
+  #agenda .event-group:nth-child(2) .inner .content .box {
+    height: 45vw;
+    justify-content: start;
+    background: url("../img/event_img_02.png") no-repeat right bottom/50vw, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(2) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(3) {
+    justify-content: start;
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(3) .inner .content > p {
+    background: linear-gradient(to right, #8631ff, #b17bff);
+  }
+  #agenda .event-group:nth-child(3) .inner .content .box {
+    height: 45vw;
+    justify-content: start;
+    background: url("../img/event_img_03_3.png") no-repeat right bottom/60vw, linear-gradient(90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(3) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(4) {
+    justify-content: start;
+    text-align: left;
+  }
+  #agenda .event-group:nth-child(4) .inner > p {
+    margin-top: 3.75vw;
+    font-size: 3.75vw;
+  }
+  #agenda .event-group:nth-child(4) .inner .content > p {
+    background: linear-gradient(180deg);
+  }
+  #agenda .event-group:nth-child(4) .inner .content .box {
+    height: 60vw;
+    align-items: flex-start;
+    justify-content: start;
+    background: url("../img/event_img_04.png") no-repeat center bottom/contain, linear-gradient(-90deg, #00fff228 0.5%, #22222270 5%), linear-gradient(0deg, #00fff228 1%, #22222270 10%);
+  }
+  #agenda .event-group:nth-child(4) .inner .content .box .text-group {
+    text-align: left;
+  }
+  #agenda .location-group .inner {
+    padding: 2.5vw;
+  }
+  #agenda .location-group p {
+    margin-top: 3.75vw;
+    font-size: 3.75vw;
+  }
+
+  footer .container {
+    padding: 10vw 6.25vw;
+  }
+  footer .logo {
+    width: 100%;
+    height: 4.4vw;
+    margin-bottom: 3.75vw;
+  }
+  footer .text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  footer .text-group .text-item {
+    margin-bottom: 3.75vw;
+  }
+  footer .text-group .text-item:last-child {
+    margin-bottom: 0;
+  }
+  footer .text-group p {
+    font-size: 3.75vw;
   }
 }
 
