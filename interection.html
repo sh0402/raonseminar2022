@@ -14,27 +14,32 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
   <style>
-    html {}
+    html {
+      height: 100vh;
+    }
 
     body {
       position: relative;
+      font-size: 16px;
+      background-color: black;
     }
 
     .box {
       position: relative;
-      height: 500px;
+      height: 100vh;
     }
 
-    .box h2 {
+    .box h1 {
       position: absolute;
-      left: 0;
+      left: 50%;
       top: 50%;
-      width: 100%;
+      transform: translate(-50%, -50%);
       font-size: 2rem;
+      color: #fff;
     }
 
     .fix_motion {
-      height: 7000px;
+      height: 1000vh;
     }
 
     .fix_motion .fix_wrap {
@@ -66,6 +71,10 @@
       transform: translate(-50%, -50%);
     }
 
+    .fix_motion.off {
+      display: none;
+    }
+
     .fix_motion .fix_wrap .cont_box .canvas_wrap .no_canvas {
       display: none;
       position: absolute;
@@ -87,11 +96,11 @@
 <body>
 
   <div class="wrap">
-    <section class="box">
+    <section>
       <h2>FIXED CONTENT</h2>
     </section>
 
-    <section class="fix_motion">
+    <section class="fix_motion" data-aos="ease-in-out" data-aos-duration="2000">
       <article class="fix_wrap">
         <div class="cont_box">
           <div class="canvas_wrap">
@@ -99,52 +108,67 @@
               <img src="../img/hero-move/39.png" alt="">
             </figure>
           </div>
-          <p class="txt pos1 active">
-            text 01
-          </p>
-          <p class="txt pos2 active">
-            text 02
-          </p>
-          <p class="txt pos3 active">
-            text 03
-          </p>
+
+
         </div>
       </article>
     </section>
 
-    <section class="box"></section>
+    <section class="box">
+
+      <h1>여기서부터 INTRO</h1>
+
+    </section>
   </div>
 
   <script type="text/javascript">
     $(function () {
 
-      var canvas = document.createElement('canvas');
-      var ctx = canvas.getContext('2d');
-      var el = document.querySelector('.canvas_wrap');
-      var imgLength = 250;
-      var imgSrc = '../img/hero-move/';
-      var imgFormat = '.png';
-      var imgArray = [];
-      var imageIterlator = 0;
-      var scrollBody = $('.fix_motion');
-      var scrollHeight;
-      var scrollRealHeight;
-      var winScrollTop;
-      var sectionOffsetTop;
-      var sectionScrollTop;
-      var scrollPercent;
-      var percent;
-      var imgWidth;
-      var imgHeight;
+      var scrollBody = $('.fix_motion'); // 부모 스크롤 엘리먼트
 
-      function setProperty() {
-        scrollHeight = scrollBody.height();
-        scrollRealHeight = scrollHeight - $(window).height();
-        winScrollTop = $(window).scrollTop();
-        sectionOffsetTop = scrollBody.offset().top;
+      var scrollHeight; // 스크롤 높이
+      var sectionOffsetTop; //섹션의 오프셋 탑 변수
+      var sectionScrollTop; //섹션의 스크롤 탑 변수
+      var scrollRealHeight; // 실제로 스크롤 해야될 높이를 담을 변수를 선언
+      var winScrollTop; // 스크롤바의 높이를 담을 변수를 선언
+      var scrollPercent; // 스크롤 위치 / 스크롤 길이로 구한 비율 값
+      var percent; // 스크롤 백분율값을 담을 변수을 선언
+
+      var windowWidth = $(window).width(); // 화면의 넓이 값
+      var mobileSize = 1024; // 모바일로 변환된 사이즈 설정 (기명으로 모바일 버전을 체크하는게 아니라 스크린 사이즈가 1024보다 작을 경우 모바일로 간주)
+      var isMobile; // 화면 사이즈가 모바일인지 체크하는 변수
+
+      var el = document.querySelector('.canvas_wrap'); // 캔버스를 담을 변수
+      var canvas = document.createElement('canvas'); // 캔버스 생성
+      var ctx = canvas.getContext('2d'); // 랜더링 컨텍스트 타입을 2D로 선언
+      var imgSrc = 'img/hero-move/'; // 이미지 경로 설정
+      var imgFormat = '.png'; // 이미지 포멧 설정
+      var imgLength = 250;  // 총 이미지의 렝스
+
+      var pcImgSize = [600, 812]; // PC일때 이미지 사이즈 [가로, 세로]
+      var mobileImgSize = [300, 406]; // PC일때 이미지 사이즈 [가로, 세로]
+      var imgWidth; // 이미지 넓이
+      var imgHeight; // 이미지 높이
+      var imgArray = []; // 이미지를 담을 배열
+      var imageIterlator = 0; // 이미지가 로드 되었는지 체크하는 값
+
+
+      function setProperty() { // 스크롤 할 때 변할 값을 세팅해주는 함수
+
+        scrollHeight = scrollBody.height(); // 스크롤 높이
+        sectionOffsetTop = scrollBody.offset().top; // 섹션의 오프셋 탑 변수
+
+        scrollRealHeight = (scrollHeight - $(window).height()); // 실제로 스크롤 해야 될 높이 값을 구함
+        winScrollTop = $(window).scrollTop(); // 스크롤 바의 현재 위치를 구함
         sectionScrollTop = winScrollTop - sectionOffsetTop;
-        scrollPercent = sectionScrollTop / scrollRealHeight;
-        percent = scrollPercent * 100;
+
+        scrollPercent = sectionScrollTop / scrollRealHeight; // 스크롤 위치 / 스크롤 길이로 구한 비율 값
+        percent = scrollPercent * 100;  // 백분율을 구함
+
+        windowWidth = $(window).width(); //윈도우의 넓이
+        isMobile = windowWidth > mobileSize ? false : true // PC일 경우 falsem, Mobile일 경우 true
+
+
         imgWidth = 1200 / 2;
         imgHeight = 1624 / 2;
       }
@@ -159,11 +183,14 @@
           setProperty();
           scrollFunc();
         });
+
+        console.log('end');
       }
 
       function scrollFunc() {
         var sequence = Math.min(imgLength, Math.max(0, Number((imgLength * scrollPercent).toFixed(0))));
         renderCanvas(sequence);
+        contentIn();
       }
 
       function renderCanvas(sequence) {
@@ -171,6 +198,17 @@
         ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight);
         console.log(imgArray[sequence]);
       }
+
+      // function contentIn() {
+      //   if (percent >= 99) {
+      //     $('.fix_motion').addClass('off');
+      //     console.log('canvas off');
+      //   }
+      //   if (percent >= 99) {
+
+      //   }
+
+      // }
 
       function init() {
         el.appendChild(canvas);
@@ -198,8 +236,11 @@
       }
 
       init();
-
     })
+
+
+
+
   </script>
 
 </body>
