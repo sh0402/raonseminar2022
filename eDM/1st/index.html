@@ -8,6 +8,7 @@
   <title>시큐업 세미나 2022 - eDM</title>
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="http://davidjbradshaw.com/imagemap-resizer/js/imageMapResizer.min.js"></script>
 
 </head>
 
@@ -27,19 +28,9 @@
       <area shape="rect" coords="350, 2296, 556, 2296" href="/" alt="" target="_blank">
     </map>
 
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/imageMapResizer.min.js"></script>
 
-
-    <script src="http://davidjbradshaw.com/imagemap-resizer/js/imageMapResizer.min.js"></script>
-
-    <script>
-      $('map').imageMapResize();
-
-      $(document).ready(function () {
-        $('.NO-CACHE').attr('src', function () { return $(this).attr('src') + "?a=" + Math.random() });
-      });
-    </script>
-
-    <script src="//embed.typeform.com/next/embed.js"></script>
 </body>
 
 </html>
