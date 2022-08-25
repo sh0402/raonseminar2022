@@ -434,6 +434,7 @@ strong {
 #agenda .event-group .inner .content .box .text-group p {
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
+  line-height: 1.6;
 }
 #agenda .event-group .inner .content .box .text-group p:nth-child(1) {
   font-size: 2.5rem;
@@ -492,6 +493,7 @@ strong {
   margin-top: 1rem;
   font-size: 1rem;
   opacity: 0.6;
+  line-height: 1.4;
 }
 #agenda .event-group:nth-child(4) .inner .content > p {
   background: linear-gradient(to left, #8631ff, #b17bff);
@@ -520,6 +522,7 @@ strong {
   margin-top: 1rem;
   font-size: 1rem;
   opacity: 0.6;
+  line-height: 1.4;
 }
 
 footer {
@@ -544,6 +547,7 @@ footer .text-group p {
   color: #fff;
   font-size: 1rem;
   opacity: 0.6;
+  line-height: 1.4;
 }
 footer .text-group p a {
   color: #fff;
