@@ -79,6 +79,12 @@ strong {
   -webkit-background-clip: text;
 }
 
+.skyBlue-color {
+  background: #12BEFF;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
 .mint-color {
   background: #00fff2;
   color: transparent;
@@ -169,6 +175,7 @@ strong {
 }
 
 #main {
+  position: relative;
   padding: 7.5rem 0;
 }
 #main > canvas {
@@ -375,13 +382,13 @@ strong {
   color: #00fff2;
 }
 #agenda table tbody td:nth-of-type(1) .radius-box {
-  border: 1px solid #00fff2;
+  border: 1px solid #12BEFF;
 }
 #agenda table tbody td:nth-of-type(1) p {
-  color: #00fff2;
+  color: #12BEFF;
 }
 #agenda table tbody td:nth-of-type(1) p:first-child {
-  color: #00fff2;
+  color: #12BEFF;
 }
 #agenda table tbody td:nth-of-type(1) p:last-child {
   color: #fff;
@@ -554,7 +561,7 @@ footer .text-group p a {
 }
 
 #interaction .fix_motion {
-  height: 200vh;
+  height: 400vh;
 }
 #interaction .fix_motion .fix_wrap {
   overflow: hidden;
@@ -591,7 +598,7 @@ footer .text-group p a {
   height: 1080px;
 }
 #interaction .fix_motion.off {
-  display: none;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

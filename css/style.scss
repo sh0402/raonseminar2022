@@ -88,6 +88,12 @@ strong {
   -webkit-background-clip: text;
 }
 
+.skyBlue-color {
+  background: #12BEFF;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
 .mint-color {
   background: #00fff2;
   color: transparent;
@@ -173,6 +179,7 @@ strong {
 }
 
 #main {
+  position: relative;
   padding: 7.5rem 0;
 
   > canvas {
@@ -420,14 +427,14 @@ strong {
         color: #00fff2;
   
         .radius-box {
-          border: 1px solid #00fff2;
+          border: 1px solid #12BEFF;
         }
   
         p {
-          color: #00fff2;
+          color: #12BEFF;
   
           &:first-child {
-            color: #00fff2;
+            color: #12BEFF;
           }
 
           &:last-child{
@@ -687,7 +694,7 @@ footer {
 #interaction {
 
   .fix_motion {
-    height: 200vh;
+    height: 400vh;
 
     .fix_wrap {
       overflow: hidden;
@@ -730,6 +737,6 @@ footer {
   }
 
   .fix_motion.off {
-    display: none;
+    opacity: 0;
   }
 }

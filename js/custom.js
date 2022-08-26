@@ -41,7 +41,7 @@ var matrix = (function () {
   var init = function () {
     document.body.style.background = 'black';
     var mdr = document.createElement('canvas');
-    var el2 = document.querySelector('#main');
+    var elMain = document.querySelector('#main');
     
     document.body.prepend(mdr);
 
@@ -54,7 +54,7 @@ var matrix = (function () {
     //making the canvas full screen
     // mdr.height = window.innerHeight;
     // mdr.width = window.innerWidth;
-    el2.appendChild(mdr);
+    elMain.appendChild(mdr);
     //code characters - taken from the unicode charset
     var code = '0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0';
     //converting the string into an array of single characters

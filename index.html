@@ -49,8 +49,8 @@
 
 <body>
 
-  <section id="interaction">
-    <section class="fix_motion" data-aos="ease-in-out" data-aos-duration="2000">
+  <!-- <section id="interaction">
+    <section class="fix_motion">
       <article class="fix_wrap">
         <div class="cont_box">
           <div class="canvas_wrap">
@@ -61,10 +61,10 @@
         </div>
       </article>
     </section>
-  </section>
+  </section> -->
 
 
-  <section id="main" data-aos="fade-up" data-aos-duration="2000">
+  <section id="main">
     <div class="container">
       <div class="main_img">
         <img src="img/main-img.png" alt="" />
@@ -91,6 +91,11 @@
             <div class="radius-box">주최 / 주관</div>
             <p>한국디지털인증협회 / 라온시큐어</p>
           </div>
+
+          <div class="item mint-color">
+            <div class="radius-box">협찬</div>
+            <p>NH농협중앙회, 네이버, 토스, Digital Trust</p>
+          </div>
         </div>
       </div>
 
@@ -116,7 +121,36 @@
             </span>
           </p>
 
-          <button data-tf-popup="B6oGShcn" data-tf-size="70" data-tf-iframe-props="title=My typeform"
+          <!-- //TYPEFORM <button
+              data-tf-popup="FbDDQjEj"
+              data-tf-iframe-props="title=[사전등록] 시큐업 세미나 2022 참가신청"
+              data-tf-medium="snippet"
+              style="
+                all: unset;
+                font-family: Helvetica, Arial, sans-serif;
+                display: inline-block;
+                max-width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                background-color: #0445af;
+                color: #ffffff;
+                font-size: 20px;
+                border-radius: 25px;
+                padding: 0 33px;
+                font-weight: bold;
+                height: 50px;
+                cursor: pointer;
+                line-height: 50px;
+                text-align: center;
+                margin: 0;
+                text-decoration: none;
+              "
+            >
+              Launch me
+            </button> -->
+
+          <button data-tf-popup="FbDDQjEj" data-tf-size="70" data-tf-iframe-props="title=[사전등록] 시큐업 세미나 2022 참가신청"
             data-tf-medium="snippet">
             사전 등록하기
           </button>
@@ -243,8 +277,8 @@
               <div class="item-group">
                 <div class="img-box trackB-img-tos"></div>
                 <p>
-                  Toss<br />
-                  박승익 실장
+                  토스<br />
+                  방승익 실장
                 </p>
               </div>
             </div>
@@ -301,7 +335,7 @@
               <th scope="row">15:40 - 16:00</th>
 
               <td>
-                <div class="radius-box mint-color">Track A</div>
+                <div class="radius-box skyBlue-color">Track A</div>
                 <p>MZ세대를 겨냥한 'e-병무지갑' 서비스</p>
                 <p><strong>병무청</strong> 백상현 서기관</p>
               </td>
@@ -343,7 +377,7 @@
                   본인확인, 간편인증<br />
                   이제는 토스 인증서 하나로 본인인증
                 </p>
-                <p><strong>Toss</strong> 박승익 실장</p>
+                <p><strong>토스</strong> 방승익 실장</p>
               </td>
             </tr>
 
@@ -468,8 +502,7 @@
           </div>
         </div>
 
-
-        <button data-tf-popup="B6oGShcn" data-tf-size="70" data-tf-iframe-props="title=My typeform"
+        <button data-tf-popup="FbDDQjEj" data-tf-size="70" data-tf-iframe-props="title=[사전등록] 시큐업 세미나 2022 참가신청"
           data-tf-medium="snippet" data-aos="fade-up" data-aos-duration="1000">
           사전 등록하기
         </button>
@@ -511,12 +544,10 @@
 
 
   <footer>
-
     <div class="container">
       <div class="logo"></div>
 
       <div class="text-group">
-
         <div class="text-item">
           <p>
             서울특별시 강남구 테헤란로 145 (역삼동 우신빌딩 15층)
@@ -533,20 +564,10 @@
           </p>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <script>
-    function formLink() {
-      alert('추후 폼 연결')
-    }
-  </script>
-
-<<<<<<< HEAD
-=======
-
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     $(function () {
 
       var scrollBody = $('.fix_motion'); // 부모 스크롤 엘리먼트
@@ -568,7 +589,7 @@
       var ctx = canvas.getContext('2d'); // 랜더링 컨텍스트 타입을 2D로 선언
       var imgSrc = 'img/hero-move/'; // 이미지 경로 설정
       var imgFormat = '.png'; // 이미지 포멧 설정
-      var imgLength = 250;  // 총 이미지의 렝스
+      var imgLength = 113;  // 총 이미지의 렝스
 
       var pcImgSize = [600, 812]; // PC일때 이미지 사이즈 [가로, 세로]
       var mobileImgSize = [300, 406]; // PC일때 이미지 사이즈 [가로, 세로]
@@ -606,21 +627,22 @@
         var sequence = Math.max(imgLength - imgLength, Math.min(Number((imgLength - imgLength - (imgLength - imgLength - imgLength * scrollPercent)).toFixed(0)), imgLength));
         //이미지 시퀸스 번호 구함
         renderCanvas(sequence);
-        // contentIn();
+        contentIn();
       }
 
       function renderCanvas(sequence) { // 캔버스에 이미지 Draw
         ctx.clearRect(0, 0, imgWidth, imgHeight); // 지정한 x, y위치값과 넓이 높이 값을 넣어 캔버스를 클리어
         ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight); // 이미지 배열에 담아둔 이미지를 캔버스에 그림
+        console.log(imgArray[sequence]);
       }
 
-      // function contentIn() {
-      //   if (percent >= 100) {
-      //     $('.fix_motion').addClass('off');
+      function contentIn() {
+        if (percent >= 100) {
+          $('.fix_motion').addClass('off');
 
-      //     event.stopPropagation();
-      //   }
-      // }
+          event.stopPropagation();
+        }
+      }
 
       function bindEvent() { // 이벤트를 추가 하는 함수
 
@@ -671,9 +693,8 @@
       }
     });
 
-  </script>
+  </script> -->
 
->>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
   <script src="//embed.typeform.com/next/embed.js"></script>
 
 </body>
