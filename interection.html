@@ -8,10 +8,17 @@
 
   <title>Interection</title>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <script>
+    !function (e, n, t) { function r(e, n) { return typeof e === n } function s() { var e, n, t, s, o, i, a; for (var l in w) if (w.hasOwnProperty(l)) { if (e = [], n = w[l], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (t = 0; t < n.options.aliases.length; t++)e.push(n.options.aliases[t].toLowerCase()); for (s = r(n.fn, "function") ? n.fn() : n.fn, o = 0; o < e.length; o++)i = e[o], a = i.split("."), 1 === a.length ? Modernizr[a[0]] = s : (!Modernizr[a[0]] || Modernizr[a[0]] instanceof Boolean || (Modernizr[a[0]] = new Boolean(Modernizr[a[0]])), Modernizr[a[0]][a[1]] = s), C.push((s ? "" : "no-") + a.join("-")) } } function o(e) { var n = _.className, t = Modernizr._config.classPrefix || ""; if (x && (n = n.baseVal), Modernizr._config.enableJSClass) { var r = new RegExp("(^|\\s)" + t + "no-js(\\s|$)"); n = n.replace(r, "$1" + t + "js$2") } Modernizr._config.enableClasses && (n += " " + t + e.join(" " + t), x ? _.className.baseVal = n : _.className = n) } function i() { return "function" != typeof n.createElement ? n.createElement(arguments[0]) : x ? n.createElementNS.call(n, "http://www.w3.org/2000/svg", arguments[0]) : n.createElement.apply(n, arguments) } function a(e, n) { return function () { return e.apply(n, arguments) } } function l(e, n, t) { var s; for (var o in e) if (e[o] in n) return t === !1 ? e[o] : (s = n[e[o]], r(s, "function") ? a(s, t || n) : s); return !1 } function f(e, n) { return !!~("" + e).indexOf(n) } function u(e) { return e.replace(/([a-z])-([a-z])/g, function (e, n, t) { return n + t.toUpperCase() }).replace(/^-/, "") } function c(e) { return e.replace(/([A-Z])/g, function (e, n) { return "-" + n.toLowerCase() }).replace(/^ms-/, "-ms-") } function d(n, t, r) { var s; if ("getComputedStyle" in e) { s = getComputedStyle.call(e, n, t); var o = e.console; if (null !== s) r && (s = s.getPropertyValue(r)); else if (o) { var i = o.error ? "error" : "log"; o[i].call(o, "getComputedStyle returning null, its possible modernizr test results are inaccurate") } } else s = !t && n.currentStyle && n.currentStyle[r]; return s } function p() { var e = n.body; return e || (e = i(x ? "svg" : "body"), e.fake = !0), e } function m(e, t, r, s) { var o, a, l, f, u = "modernizr", c = i("div"), d = p(); if (parseInt(r, 10)) for (; r--;)l = i("div"), l.id = s ? s[r] : u + (r + 1), c.appendChild(l); return o = i("style"), o.type = "text/css", o.id = "s" + u, (d.fake ? d : c).appendChild(o), d.appendChild(c), o.styleSheet ? o.styleSheet.cssText = e : o.appendChild(n.createTextNode(e)), c.id = u, d.fake && (d.style.background = "", d.style.overflow = "hidden", f = _.style.overflow, _.style.overflow = "hidden", _.appendChild(d)), a = t(c, e), d.fake ? (d.parentNode.removeChild(d), _.style.overflow = f, _.offsetHeight) : c.parentNode.removeChild(c), !!a } function y(n, r) { var s = n.length; if ("CSS" in e && "supports" in e.CSS) { for (; s--;)if (e.CSS.supports(c(n[s]), r)) return !0; return !1 } if ("CSSSupportsRule" in e) { for (var o = []; s--;)o.push("(" + c(n[s]) + ":" + r + ")"); return o = o.join(" or "), m("@supports (" + o + ") { #modernizr { position: absolute; } }", function (e) { return "absolute" == d(e, null, "position") }) } return t } function g(e, n, s, o) { function a() { c && (delete N.style, delete N.modElem) } if (o = r(o, "undefined") ? !1 : o, !r(s, "undefined")) { var l = y(e, s); if (!r(l, "undefined")) return l } for (var c, d, p, m, g, v = ["modernizr", "tspan", "samp"]; !N.style && v.length;)c = !0, N.modElem = i(v.shift()), N.style = N.modElem.style; for (p = e.length, d = 0; p > d; d++)if (m = e[d], g = N.style[m], f(m, "-") && (m = u(m)), N.style[m] !== t) { if (o || r(s, "undefined")) return a(), "pfx" == n ? m : !0; try { N.style[m] = s } catch (h) { } if (N.style[m] != g) return a(), "pfx" == n ? m : !0 } return a(), !1 } function v(e, n, t, s, o) { var i = e.charAt(0).toUpperCase() + e.slice(1), a = (e + " " + T.join(i + " ") + i).split(" "); return r(n, "string") || r(n, "undefined") ? g(a, n, s, o) : (a = (e + " " + z.join(i + " ") + i).split(" "), l(a, n, t)) } function h(e, n, r) { return v(e, t, t, n, r) } var C = [], w = [], S = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var t = this; setTimeout(function () { n(t[e]) }, 0) }, addTest: function (e, n, t) { w.push({ name: e, fn: n, options: t }) }, addAsyncTest: function (e) { w.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = S, Modernizr = new Modernizr; var _ = n.documentElement, x = "svg" === _.nodeName.toLowerCase(), b = S._config.usePrefixes ? " -webkit- -moz- -o- -ms- ".split(" ") : ["", ""]; S._prefixes = b, Modernizr.addTest("csspositionsticky", function () { var e = "position:", n = "sticky", t = i("a"), r = t.style; return r.cssText = e + b.join(n + ";" + e).slice(0, -e.length), -1 !== r.position.indexOf(n) }); var P = "Moz O ms Webkit", T = S._config.usePrefixes ? P.split(" ") : []; S._cssomPrefixes = T; var z = S._config.usePrefixes ? P.toLowerCase().split(" ") : []; S._domPrefixes = z; var E = { elem: i("modernizr") }; Modernizr._q.push(function () { delete E.elem }); var N = { style: E.elem.style }; Modernizr._q.unshift(function () { delete N.style }), S.testAllProps = v, S.testAllProps = h, Modernizr.addTest("cssanimations", h("animationName", "a", !0)), Modernizr.addTest("csstransforms", function () { return -1 === navigator.userAgent.indexOf("Android 2.") && h("transform", "scale(1)", !0) }), Modernizr.addTest("csstransitions", h("transition", "all", !0)), s(), o(C), delete S.addTest, delete S.addAsyncTest; for (var k = 0; k < Modernizr._q.length; k++)Modernizr._q[k](); e.Modernizr = Modernizr }(window, document);
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
     html {
@@ -39,7 +46,15 @@
     }
 
     .fix_motion {
+<<<<<<< HEAD
       height: 1000vh;
+=======
+      height: 200vh;
+    }
+
+    .no-csspositionsticky .fix_motion {
+      height: auto;
+>>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
     }
 
     .fix_motion .fix_wrap {
@@ -50,6 +65,10 @@
       left: 0;
       width: 100%;
       height: 100vh;
+    }
+
+    .no-csspositionsticky .fix_wrap {
+      position: relative;
     }
 
     .fix_motion .fix_wrap .cont_box {
@@ -71,6 +90,13 @@
       transform: translate(-50%, -50%);
     }
 
+<<<<<<< HEAD
+=======
+    .no-csspositionsticky .fix_motion .fix_wrap .cont_box .canvas_wrap canvas {
+      display: none;
+    }
+
+>>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
     .fix_motion.off {
       display: none;
     }
@@ -83,6 +109,10 @@
       transform: translate(-50%, -50%);
       width: 1920px;
       height: 1080px;
+    }
+
+    .no-csspositionsticky .fix_motion .fix_wrap .cont_box .canvas_wrap .no_canvas {
+      display: block;
     }
 
     .txt {
@@ -114,7 +144,11 @@
       </article>
     </section>
 
+<<<<<<< HEAD
     <section class="box">
+=======
+    <section class="box" data-aos="fade-up" data-aos-duration="2000">
+>>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
 
       <h1>여기서부터 INTRO</h1>
 
@@ -163,6 +197,7 @@
         sectionScrollTop = winScrollTop - sectionOffsetTop;
 
         scrollPercent = sectionScrollTop / scrollRealHeight; // 스크롤 위치 / 스크롤 길이로 구한 비율 값
+<<<<<<< HEAD
         percent = scrollPercent * 100;  // 백분율을 구함
 
         windowWidth = $(window).width(); //윈도우의 넓이
@@ -171,24 +206,55 @@
 
         imgWidth = 1200 / 2;
         imgHeight = 1624 / 2;
+=======
+        percent = scrollPercent * 100; // 백분율을 구함
+
+        windowWidth = $(window).width(); //윈도우의 넓이
+        isMobile = windowWidth > mobileSize ? false : true; // PC일 경우 falsem, MOBILE일 경우 true
+
+        imgWidth = !isMobile ? pcImgSize[0] : mobileImgSize[0]; // 이미지 넓이 설정
+        imgHeight = !isMobile ? pcImgSize[1] : mobileImgSize[1]; // 이미지 높이 설정
+>>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
       }
 
-      function setCanvas() {
-        canvas.width = imgWidth;
-        canvas.height = imgHeight;
+      function setCanvas() { // 캔버스 기본값 세팅
+        canvas.width = imgWidth; // 캔버스 넓이
+        canvas.height = imgHeight; // 캔버스 높이
       }
 
-      function bindEvent() {
-        $(window).scroll(function () {
+      function scrollFunc() { // 스크롤 할때 실행될 함수
+        var sequence = Math.max(imgLength - imgLength, Math.min(Number((imgLength - imgLength - (imgLength - imgLength - imgLength * scrollPercent)).toFixed(0)), imgLength));
+        //이미지 시퀸스 번호 구함
+        renderCanvas(sequence);
+        // contentIn();
+      }
+
+      function renderCanvas(sequence) { // 캔버스에 이미지 Draw
+        ctx.clearRect(0, 0, imgWidth, imgHeight); // 지정한 x, y위치값과 넓이 높이 값을 넣어 캔버스를 클리어
+        ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight); // 이미지 배열에 담아둔 이미지를 캔버스에 그림
+      }
+
+      // function contentIn() {
+      //   if (percent >= 100) {
+      //     $('.fix_motion').addClass('off');
+
+      //     event.stopPropagation();
+      //   }
+      // }
+
+      function bindEvent() { // 이벤트를 추가 하는 함수
+
+        $(window).scroll(function () { // 1.스크롤 이벤트
           setProperty();
           scrollFunc();
         });
 
+<<<<<<< HEAD
         console.log('end');
       }
 
       function scrollFunc() {
-        var sequence = Math.min(imgLength, Math.max(0, Number((imgLength * scrollPercent).toFixed(0))));
+        var sequence = Math.min(imgLength, Math.max(0, Number((imgLength * scrollPercent + 10).toFixed(0))));
         renderCanvas(sequence);
         contentIn();
       }
@@ -212,35 +278,65 @@
 
       function init() {
         el.appendChild(canvas);
+=======
+        $(window).resize(function () { //2. 리사이즈 이벤트
+          setProperty(); // 1. 이미지 크기 구함
+          setCanvas(); // 2. 캔버스 크기 설정
+          scrollFunc(); // 3. 이미지 Draw
+        });
+      }
+
+      function init() { // 초기화 함수
+        el.appendChild(canvas); // canvas_wrap 엘리먼트에 canvas를 담아줌
+>>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
 
         for (var i = 0; i <= imgLength; i++) {
-          var img = new Image();
-          var path = imgSrc + i + imgFormat;
+          var img = new Image(); // 이미지 객체 인스턴스 생성
+          var path = imgSrc + i + imgFormat; // 이미지 패스 생성
 
-          img.src = path;
-          imgArray.push(img);
+          img.src = path; // img에 패스 대입
 
           img.onload = function () {
-            imageIterlator += 1;
+            imageIterlator += 1; // 이미지 로드 카운트의 카운트
 
-            if (imageIterlator === imgLength) {
-              console.log('end load');
-              bindEvent();
-              setProperty();
-              setCanvas();
-              scrollFunc();
-              ctx.drawImage(img, 0, 0);
+            if (imageIterlator === imgLength) { // 이미지가 로드된 횟수와 이미지 렝스가 같아질 경우에 인터렉션 함수들을 호출함
+              setProperty(); // 스크롤 할때 변할 값들을 세팅해주는 함수 
+              setCanvas();  // 캔버스 기본값 세팅
+              bindEvent(); // 스크롤 이벤트 바인드
+              scrollFunc(); // 스크롤할때 실행될 하수
             }
           }
+
+          imgArray.push(img); // 이미지 배열에 이미지를 담음
         }
       }
 
+<<<<<<< HEAD
       init();
     })
 
 
 
 
+=======
+      if (Modernizr.csspositionsticky) { // 브라우저가 sticky를 지원할 경우 실행
+        init(); // START
+      }
+
+      window.onload = function () {
+        setTimeout(function () {
+          scrollTo(0, 0);
+        }, 100);
+      }
+    });
+
+  </script>
+
+  <script>
+    /** Animation on Scroll */
+    AOS.init();
+    /** END / Animation on Scroll */
+>>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
   </script>
 
 </body>

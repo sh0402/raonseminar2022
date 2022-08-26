@@ -34,13 +34,13 @@ body {
   height: 500vh;
 }
 
-canvas {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -9999;  
-}
+// canvas {
+//   position: absolute;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   z-index: -9999;  
+// }
 
 button {
   z-index: 999;
@@ -125,9 +125,7 @@ strong {
   // border: 1px solid #fff5;
 }
 
-
-// SPEAKERS 썸네일
-
+//SPEAKERS 썸네일
 //TRACK_A
 .trackA-img-adi {
   background: url('../img/speakers-thumb/trackA-img-adi.png') no-repeat center center / cover;
@@ -144,6 +142,8 @@ strong {
 .trackA-img-raonwh-2 {
   background: url('../img/speakers-thumb/trackA-img-raonwh-2.png') no-repeat center center / cover;
 }
+
+//TRACK_B
 .trackB-img-chungang {
   background: url('../img/speakers-thumb/trackB-img-chungang.png') no-repeat center center / cover;
 }
@@ -172,9 +172,16 @@ strong {
   max-height: 100vh;
 }
 
-
 #main {
   padding: 7.5rem 0;
+
+  > canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999;
+  }
 
   .container {
     height: 100%;
@@ -674,3 +681,55 @@ footer {
   }
 }
 
+
+
+//INTERACTION
+#interaction {
+
+  .fix_motion {
+    height: 200vh;
+
+    .fix_wrap {
+      overflow: hidden;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+
+      .cont_box  {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+
+        .canvas_wrap { 
+          position: relative;
+          width: 100%;
+          height: 100%;
+          
+          > canvas {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .no_canvas {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1920px;
+            height: 1080px;
+          }
+        }
+      }
+    }
+  }
+
+  .fix_motion.off {
+    display: none;
+  }
+}

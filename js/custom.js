@@ -1,13 +1,13 @@
 
 /** Swiper */
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper('.swiper', {
   autoplay: false,
   loop: true,
   slidesPerView: 1,
   spaceBetween: 10,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   breakpoints: {
     // 화면의 넓이가 320px 이상일 때
@@ -39,15 +39,14 @@ const swiper = new Swiper(".swiper", {
 /** Metrix */
 var matrix = (function () {
   var init = function () {
-    document.body.style.background = "black";
-    var mdr = document.createElement("canvas");
-
+    document.body.style.background = 'black';
+    var mdr = document.createElement('canvas');
+    var el2 = document.querySelector('#main');
+    
     document.body.prepend(mdr);
 
-    var ctx = mdr.getContext("2d");
-
-    //
-    var mainBg = document.getElementById("main");
+    var ctx = mdr.getContext('2d');
+    var mainBg = document.getElementById('main');
 
     mdr.height = mainBg.offsetHeight;
     mdr.width = mainBg.offsetWidth;
@@ -55,11 +54,11 @@ var matrix = (function () {
     //making the canvas full screen
     // mdr.height = window.innerHeight;
     // mdr.width = window.innerWidth;
-
+    el2.appendChild(mdr);
     //code characters - taken from the unicode charset
-    var code = "0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0";
+    var code = '0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0';
     //converting the string into an array of single characters
-    code = code.split("");
+    code = code.split('');
 
     var font_size = 24;
     var columns = mdr.width / font_size; //number of columns for the rain
@@ -71,7 +70,7 @@ var matrix = (function () {
       drops[x] = 400;
     }
 
-    window.addEventListener("resize", function () {
+    window.addEventListener('resize', function () {
       window.requestAnimationFrame(function () {
         mdr.height = window.innerHeight;
         mdr.width = window.innerWidth;
@@ -86,13 +85,14 @@ var matrix = (function () {
     var draw = function () {
       //Black BG for the canvas
       //translucent BG to show trail
-      ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
       ctx.fillRect(0, 0, mdr.width, mdr.height);
 
-      ctx.fillStyle = "#00fff23e"; //text color
-      ctx.font = font_size + "px arial";
+      ctx.fillStyle = '#00fff23e'; //text color
+      ctx.font = font_size + 'px arial';
       //looping over drops
       for (var i = 0; i < drops.length; i++) {
+        
         //a random code character to print
         var text = code[Math.floor(Math.random() * code.length)];
         //x = i*font_size, y = value of drops[i]*font_size
@@ -123,8 +123,8 @@ var matrix = (function () {
 // init on dom ready
 (function (fn) {
   var d = document;
-  d.readyState == "loading"
-    ? d.addEventListener("DOMContentLoaded", fn)
+  d.readyState == 'loading'
+    ? d.addEventListener('DOMContentLoaded', fn)
     : fn();
 })(function () {
   matrix.init();
