@@ -626,7 +626,7 @@
         var sequence = Math.max(imgLength - imgLength, Math.min(Number((imgLength - imgLength - (imgLength - imgLength - imgLength * scrollPercent)).toFixed(0)), imgLength));
         //이미지 시퀸스 번호 구함
         renderCanvas(sequence);
-        // contentIn();
+        contentIn();
       }
 
       function renderCanvas(sequence) { // 캔버스에 이미지 Draw
@@ -636,11 +636,11 @@
       }
 
 
-      // function contentIn() {
-      //   if (percent >= 100) {
-      //     $('.fix_motion').addClass('off');
-      //   }
-      // }
+      function contentIn() {
+        if (percent >= 50) {
+          $('.main-cont').addClass('on')
+        }
+      }
 
       function bindEvent() { // 이벤트를 추가 하는 함수
 
