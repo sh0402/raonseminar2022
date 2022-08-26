@@ -129,6 +129,10 @@ strong {
   background: url("../img/speakers-thumb/trackA-img-did.png") no-repeat center center/cover;
 }
 
+.trackA-img-mois {
+  background: url("../img/speakers-thumb/trackA-img-mois.png") no-repeat center center/cover;
+}
+
 .trackA-img-mma {
   background: url("../img/speakers-thumb/trackA-img-mma.png") no-repeat center center/cover;
 }
@@ -163,15 +167,6 @@ strong {
 
 .trackB-img-tos {
   background: url("../img/speakers-thumb/trackB-img-tos.png") no-repeat center center/cover;
-}
-
-#hero-move {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100vw;
-  max-height: 100vh;
 }
 
 #main {
@@ -599,6 +594,7 @@ footer .text-group p a {
 }
 #interaction .fix_motion.off {
   opacity: 0;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
