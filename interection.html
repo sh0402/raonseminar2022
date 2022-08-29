@@ -21,14 +21,36 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
     html {
-      height: 100vh;
+      /* height: 100vh; */
     }
 
     body {
       position: relative;
       font-size: 16px;
       background-color: black;
+    }
+
+    .wrap {
+      position: relative;
+    }
+
+    #sec01 {
+      height: 100vh;
+      background-color: black;
+    }
+
+    #sec01>canvas {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
     }
 
     .box {
@@ -46,15 +68,17 @@
     }
 
     .fix_motion {
-<<<<<<< HEAD
-      height: 1000vh;
-=======
+      /* position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); */
       height: 200vh;
+      opacity: 1;
+      transition: opacity .5s ease-out;
     }
 
-    .no-csspositionsticky .fix_motion {
+    .fix_motion .no-csspositionsticky .fix_motion {
       height: auto;
->>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
     }
 
     .fix_motion .fix_wrap {
@@ -88,17 +112,21 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      transition: opacity 1s ease-out;
     }
 
-<<<<<<< HEAD
-=======
     .no-csspositionsticky .fix_motion .fix_wrap .cont_box .canvas_wrap canvas {
       display: none;
     }
 
->>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
-    .fix_motion.off {
-      display: none;
+    /* .fix_motion.off {
+      opacity: 0;
+      z-index: -1;
+    } */
+
+    .off {
+      opacity: 0;
+      z-index: -1;
     }
 
     .fix_motion .fix_wrap .cont_box .canvas_wrap .no_canvas {
@@ -126,40 +154,26 @@
 <body>
 
   <div class="wrap">
-    <section>
-      <h2>FIXED CONTENT</h2>
-    </section>
 
-    <section class="fix_motion" data-aos="ease-in-out" data-aos-duration="2000">
+    <section class="fix_motion">
       <article class="fix_wrap">
         <div class="cont_box">
           <div class="canvas_wrap">
+            <!-- <canvas></canvas> -->
             <figure class="no_canvas">
               <img src="../img/hero-move/39.png" alt="">
             </figure>
           </div>
-
-
         </div>
       </article>
     </section>
 
-<<<<<<< HEAD
-    <section class="box">
-=======
-    <section class="box" data-aos="fade-up" data-aos-duration="2000">
->>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
 
-      <h1>여기서부터 INTRO</h1>
-
-    </section>
   </div>
 
   <script type="text/javascript">
     $(function () {
-
       var scrollBody = $('.fix_motion'); // 부모 스크롤 엘리먼트
-
       var scrollHeight; // 스크롤 높이
       var sectionOffsetTop; //섹션의 오프셋 탑 변수
       var sectionScrollTop; //섹션의 스크롤 탑 변수
@@ -177,7 +191,7 @@
       var ctx = canvas.getContext('2d'); // 랜더링 컨텍스트 타입을 2D로 선언
       var imgSrc = 'img/hero-move/'; // 이미지 경로 설정
       var imgFormat = '.png'; // 이미지 포멧 설정
-      var imgLength = 250;  // 총 이미지의 렝스
+      var imgLength = 113;  // 총 이미지의 렝스
 
       var pcImgSize = [600, 812]; // PC일때 이미지 사이즈 [가로, 세로]
       var mobileImgSize = [300, 406]; // PC일때 이미지 사이즈 [가로, 세로]
@@ -185,6 +199,8 @@
       var imgHeight; // 이미지 높이
       var imgArray = []; // 이미지를 담을 배열
       var imageIterlator = 0; // 이미지가 로드 되었는지 체크하는 값
+      var currentDirection = ''; // 현재의 방향을 나타내는 변수
+      var lastScrollTop = 0; // 방향을 구하기 위해 사용되는 변수
 
 
       function setProperty() { // 스크롤 할 때 변할 값을 세팅해주는 함수
@@ -197,16 +213,6 @@
         sectionScrollTop = winScrollTop - sectionOffsetTop;
 
         scrollPercent = sectionScrollTop / scrollRealHeight; // 스크롤 위치 / 스크롤 길이로 구한 비율 값
-<<<<<<< HEAD
-        percent = scrollPercent * 100;  // 백분율을 구함
-
-        windowWidth = $(window).width(); //윈도우의 넓이
-        isMobile = windowWidth > mobileSize ? false : true // PC일 경우 falsem, Mobile일 경우 true
-
-
-        imgWidth = 1200 / 2;
-        imgHeight = 1624 / 2;
-=======
         percent = scrollPercent * 100; // 백분율을 구함
 
         windowWidth = $(window).width(); //윈도우의 넓이
@@ -214,7 +220,6 @@
 
         imgWidth = !isMobile ? pcImgSize[0] : mobileImgSize[0]; // 이미지 넓이 설정
         imgHeight = !isMobile ? pcImgSize[1] : mobileImgSize[1]; // 이미지 높이 설정
->>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
       }
 
       function setCanvas() { // 캔버스 기본값 세팅
@@ -222,11 +227,12 @@
         canvas.height = imgHeight; // 캔버스 높이
       }
 
+
       function scrollFunc() { // 스크롤 할때 실행될 함수
         var sequence = Math.max(imgLength - imgLength, Math.min(Number((imgLength - imgLength - (imgLength - imgLength - imgLength * scrollPercent)).toFixed(0)), imgLength));
         //이미지 시퀸스 번호 구함
         renderCanvas(sequence);
-        // contentIn();
+        contentIn();
       }
 
       function renderCanvas(sequence) { // 캔버스에 이미지 Draw
@@ -234,51 +240,20 @@
         ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight); // 이미지 배열에 담아둔 이미지를 캔버스에 그림
       }
 
-      // function contentIn() {
-      //   if (percent >= 100) {
-      //     $('.fix_motion').addClass('off');
-
-      //     event.stopPropagation();
-      //   }
-      // }
+      function contentIn() {
+        if (percent >= 80) {
+          $('.canvas_wrap > canvas').addClass('off');
+          $('#sec01').css('position', 'to');
+          scrollFunc().off
+        }
+      }
 
       function bindEvent() { // 이벤트를 추가 하는 함수
-
         $(window).scroll(function () { // 1.스크롤 이벤트
           setProperty();
           scrollFunc();
         });
 
-<<<<<<< HEAD
-        console.log('end');
-      }
-
-      function scrollFunc() {
-        var sequence = Math.min(imgLength, Math.max(0, Number((imgLength * scrollPercent + 10).toFixed(0))));
-        renderCanvas(sequence);
-        contentIn();
-      }
-
-      function renderCanvas(sequence) {
-        ctx.clearRect(0, 0, imgWidth, imgHeight);
-        ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight);
-        console.log(imgArray[sequence]);
-      }
-
-      // function contentIn() {
-      //   if (percent >= 99) {
-      //     $('.fix_motion').addClass('off');
-      //     console.log('canvas off');
-      //   }
-      //   if (percent >= 99) {
-
-      //   }
-
-      // }
-
-      function init() {
-        el.appendChild(canvas);
-=======
         $(window).resize(function () { //2. 리사이즈 이벤트
           setProperty(); // 1. 이미지 크기 구함
           setCanvas(); // 2. 캔버스 크기 설정
@@ -288,7 +263,6 @@
 
       function init() { // 초기화 함수
         el.appendChild(canvas); // canvas_wrap 엘리먼트에 canvas를 담아줌
->>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
 
         for (var i = 0; i <= imgLength; i++) {
           var img = new Image(); // 이미지 객체 인스턴스 생성
@@ -311,14 +285,6 @@
         }
       }
 
-<<<<<<< HEAD
-      init();
-    })
-
-
-
-
-=======
       if (Modernizr.csspositionsticky) { // 브라우저가 sticky를 지원할 경우 실행
         init(); // START
       }
@@ -330,13 +296,106 @@
       }
     });
 
+    $(function () {
+      var matrix = (function () {
+        var init = function () {
+          document.body.style.background = 'black';
+          var mdr = document.createElement('canvas');
+          var elMain = document.querySelector('#sec01');
+
+          document.body.prepend(mdr);
+
+          var ctx = mdr.getContext('2d');
+
+          mdr.height = elMain.offsetHeight;
+          mdr.width = elMain.offsetWidth;
+
+          //making the canvas full screen
+          // mdr.height = window.innerHeight;
+          // mdr.width = window.innerWidth;
+          elMain.appendChild(mdr);
+          //code characters - taken from the unicode charset
+          var code = '0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0';
+          //converting the string into an array of single characters
+          code = code.split('');
+
+          var font_size = 24;
+          var columns = mdr.width / font_size; //number of columns for the rain
+          //an array of drops - one per column
+          var drops = [];
+          //x below is the x coordinate
+          //1 = y co-ordinate of the drop(same for every drop initially)
+          for (var x = 0; x < columns; x++) {
+            drops[x] = 400;
+          }
+
+          window.addEventListener('resize', function () {
+            window.requestAnimationFrame(function () {
+              mdr.height = window.innerHeight;
+              mdr.width = window.innerWidth;
+              columns = mdr.width / font_size;
+              for (var x = 0; x < columns; x++) {
+                drops[x] = 400;
+              }
+            });
+          });
+
+          //drawing the characters
+          var draw = function () {
+            //Black BG for the canvas
+            //translucent BG to show trail
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+            ctx.fillRect(0, 0, mdr.width, mdr.height);
+
+            ctx.fillStyle = '#00fff23e'; //text color
+            ctx.font = font_size + 'px arial';
+            //looping over drops
+            for (var i = 0; i < drops.length; i++) {
+
+              //a random code character to print
+              var text = code[Math.floor(Math.random() * code.length)];
+              //x = i*font_size, y = value of drops[i]*font_size
+              ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+              //sending the drop back to the top randomly after it has crossed the screen
+              //adding a randomness to the reset to make the drops scattered on the Y axis
+              if (drops[i] * font_size > mdr.height && Math.random() > 0.975) {
+                //if(Math.random() > 0.975) {
+                drops[i] = 0;
+              }
+
+              //incrementing Y coordinate
+              drops[i]++;
+            }
+          };
+
+          setInterval(function () {
+            window.requestAnimationFrame(draw);
+          }, 60);
+        };
+
+        return {
+          init: init,
+        };
+      })();
+
+      // init on dom ready
+      (function (fn) {
+        var d = document;
+        d.readyState == 'loading'
+          ? d.addEventListener('DOMContentLoaded', fn)
+          : fn();
+      })(function () {
+        matrix.init();
+      });
+    })
+
   </script>
 
   <script>
     /** Animation on Scroll */
     AOS.init();
     /** END / Animation on Scroll */
->>>>>>> eeb6611382cb91ed22eeeaee2005d519d1e20bca
   </script>
 
 </body>
