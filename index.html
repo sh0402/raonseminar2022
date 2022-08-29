@@ -48,7 +48,7 @@
   <style>
     #top {
       position: relative;
-      opacity: 1;
+      opacity: 0.5;
     }
 
     #top>canvas {
@@ -57,6 +57,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -999;
+      opacity: 0.5;
     }
 
     .fix_motion {
@@ -104,7 +105,7 @@
       top: 0;
       left: 0;
       right: 0;
-      opacity: 0;
+      opacity: 1;
       transition: opacity 0.5s ease-out;
       z-index: -1;
     }
@@ -112,7 +113,6 @@
     .scroll-stop.on {
       opacity: 1;
       z-index: 99;
-      margin-top: 500px;
     }
   </style>
 
@@ -638,6 +638,18 @@
       var currentDirection = ''; // 현재의 방향을 나타내는 변수
       var lastScrollTop = 0; // 방향을 구하기 위해 사용되는 변수
 
+      var scrollStop = $('.scroll-stop');
+
+      window.onload = function () {
+        if (sectionScrollTop === 0) {
+          $('.scroll-stop').on('scroll touchmove mousewheel', e => {
+            e.preventDefault();
+            e.stopPropagation();
+          });
+        }
+      }
+
+
 
       function setProperty() { // 스크롤 할 때 변할 값을 세팅해주는 함수
 
@@ -672,6 +684,7 @@
 
 
       function scrollFunc() { // 스크롤 할때 실행될 함수
+        scrollStop();
         var sequence = Math.max(imgLength - imgLength, Math.min(Number((imgLength - imgLength - (imgLength - imgLength - imgLength * scrollPercent)).toFixed(0)), imgLength));
         //이미지 시퀸스 번호 구함
 
