@@ -45,81 +45,76 @@
 
   <script defer src="js/custom.js"></script>
 
-  <style>
-    #top {
-      position: relative;
-      opacity: 0.5;
-    }
-
-    #top>canvas {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -999;
-      opacity: 0.5;
-    }
-
-    .fix_motion {
-      height: 200vh;
-    }
-
-    .fix_motion .fix_wrap {
-      overflow: hidden;
-      position: sticky;
-      position: -webkit-sticky;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-    }
-
-    .fix_motion .fix_wrap .cont_box {
-      overflow: hidden;
-      position: relative;
-      height: 100%;
-    }
-
-    .fix_motion .fix_wrap .cont_box .canvas_wrap {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .fix_motion .fix_wrap .cont_box .canvas_wrap canvas {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      transition: opacity 1s ease-out;
-      opacity: 1;
-    }
-
-    .off {
-      opacity: 0;
-      z-index: -99;
-    }
-
-    .scroll-stop {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      opacity: 1;
-      transition: opacity 0.5s ease-out;
-      z-index: -1;
-    }
-
-    .scroll-stop.on {
-      opacity: 1;
-      z-index: 99;
-    }
-  </style>
-
 </head>
 
+<style>
+  .fix_motion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200vh;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    z-index: -1;
+  }
+
+  .fix_motion .no-csspositionsticky .fix_motion {
+    height: auto;
+  }
+
+  .fix_motion .fix_wrap {
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .fix_motion .fix_wrap .cont_box {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+
+  .fix_motion .fix_wrap .cont_box .canvas_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fix_motion .fix_wrap .cont_box .canvas_wrap canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease-out;
+  }
+
+  .fix_motion .fix_wrap .cont_box .canvas_wrap .no_canvas {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1920px;
+    height: 1080px;
+  }
+
+  .hidden {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden !important;
+    touch-action: none;
+  }
+</style>
+
 <body>
-  <section id="top">
+
+  <div class="wrap">
+
     <section class="fix_motion">
       <article class="fix_wrap">
         <div class="cont_box">
@@ -129,11 +124,9 @@
         </div>
       </article>
     </section>
-  </section>
 
-  <div class="scroll-stop">
-    <section id="main">
-      <div class="container">
+    <div class="cont">
+      <section id="main">
         <div class="main_img" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
           <img src="img/main-img.png" alt="" />
         </div>
@@ -166,449 +159,448 @@
             </div>
           </div>
         </div>
+      </section>
 
-      </div>
-    </section>
+      <section id="agenda">
+        <div class="container">
+          <div class="agenda-group">
+            <div class="info-group" data-aos="fade-up" data-aos-duration="2000">
+              <p>
+                <span>
+                  전 세계적으로 확산되고 있는 디지털 전환에 따라 <br>
+                  가상 공간에서 ‘내가 나’임을 증명해야 하는 디지털 인증 시대가 열렸습니다.
+                </span>
 
-    <section id="agenda">
-      <div class="container">
-        <div class="agenda-group">
-          <div class="info-group" data-aos="fade-up" data-aos-duration="2000">
-            <p>
-              <span>
-                전 세계적으로 확산되고 있는 디지털 전환에 따라 <br>
-                가상 공간에서 ‘내가 나’임을 증명해야 하는 디지털 인증 시대가 열렸습니다.
-              </span>
+                <span>
+                  디지털 세상 속 신뢰된 신원 인증, 증명에 있어서 가장 큰 도전 과제와 필요한 핵심 기술은 무엇일까요?
+                </span>
+                <span>
+                  급변하는 디지털 인증 시장에 선제적으로 대응할 수 있는 전략을 논의하는 <br>
+                  ‘시큐업 세미나 2022’에 여러분을 초대합니다!
+                </span>
+              </p>
 
-              <span>
-                디지털 세상 속 신뢰된 신원 인증, 증명에 있어서 가장 큰 도전 과제와 필요한 핵심 기술은 무엇일까요?
-              </span>
-              <span>
-                급변하는 디지털 인증 시장에 선제적으로 대응할 수 있는 전략을 논의하는 <br>
-                ‘시큐업 세미나 2022’에 여러분을 초대합니다!
-              </span>
-            </p>
+              <button data-tf-popup="FbDDQjEj" data-tf-size="70" data-tf-iframe-props="title=[사전등록] 시큐업 세미나 2022 참가신청"
+                data-tf-medium="snippet">
+                사전 등록하기
+              </button>
+            </div>
+
+          </div>
+
+          <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="mint-color">- SPEAKERS -</h1>
+
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackA-img-did"></div>
+                    <p>
+                      한국디지털인증협회<br />
+                      이기혁 회장
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackA-img-adi"></div>
+                    <p>
+                      ADI Association<br />
+                      Ramesh Kesanupalli
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackA-img-mois"></div>
+                    <p>
+                      행정안전부<br />
+                      이상민 과장
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackA-img-raonwh-1"></div>
+                    <p>
+                      라온화이트햇<br />
+                      김태진 전무
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackA-img-mma"></div>
+                    <p>
+                      병무청<br />
+                      백상현 서기관
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackA-img-raonwh-2"></div>
+                    <p>
+                      라온화이트햇<br />
+                      김진호 이사
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackB-img-dt"></div>
+                    <p>
+                      Digital Trust<br />
+                      김창수 전무
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackB-img-chungang"></div>
+                    <p>
+                      중앙대학교<br />
+                      장항배 교수
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackB-img-kisa"></div>
+                    <p>
+                      KISA<br />
+                      박정효 책임
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackB-img-nh"></div>
+                    <p>
+                      NH농협상호금융<br />
+                      정재헌 부장
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackB-img-naver"></div>
+                    <p>
+                      네이버<br />
+                      최동욱 리더
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="item-group">
+                    <div class="img-box trackB-img-tos"></div>
+                    <p>
+                      토스<br />
+                      방승익 실장
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+
+          <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="mint-color">- AGENDA -</h1>
+
+            <table>
+              <tbody class="text-left">
+                <tr>
+                  <th scope="row">13:00 - 14:00</th>
+                  <td class="white-color">등록 및 전시부스 관람</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">14:00 - 14:10</th>
+                  <td>오프닝: 디지털 인증의 현재와 미래</td>
+                  <td><strong>한국디지털인증협회</strong> 이기혁 회장</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">14:10 - 14:30</th>
+                  <td>
+                    Balancing Security and Privacy <br>with Trust and Accountability
+                  </td>
+                  <td><strong>ADI Association</strong> Ramesh Kesanupalli</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">14:30 - 14:50</th>
+                  <td>'모바일 운전면허증' 신분증의 패러다임을 바꾸다</td>
+                  <td><strong>행정안전부</strong> 이상민 과장</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">14:50 - 15:10</th>
+                  <td>인증 서비스의 새로운 기준, OmniOne 통합인증 서비스</td>
+                  <td><strong>라온화이트햇</strong> 김태진 전무</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">15:10 - 15:40</th>
+                  <td class="white-color">Coffee Break / 전시부스 관람</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">15:40 - 16:00</th>
+
+                  <td>
+                    <div class="radius-box skyBlue-color">Track A</div>
+                    <p>MZ세대를 겨냥한 'e-병무지갑' 서비스</p>
+                    <p><strong>병무청</strong> 백상현 서기관</p>
+                  </td>
+
+                  <td>
+                    <div class="radius-box purple-color">Track B</div>
+                    <p>다양한 전자서명수단의 차별 없는 경쟁환경 조성 방향</p>
+                    <p><strong>KISA</strong> 박정효 책임</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">16:00 - 16:20</th>
+
+                  <td>
+                    <p>옴니원, NFT의 미래 게임 체인저</p>
+                    <p><strong>라온화이트햇</strong> 김진호 이사</p>
+                  </td>
+
+                  <td>
+                    <p>디지털 인증을 활용한 안전하고 편리한 모두의 전자지갑</p>
+                    <p><strong>NH농협상호금융</strong> 정재헌 부장</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">16:20 - 16:40</th>
+
+                  <td>
+                    <p>
+                      DTX: Securing Enterprises from External Identities <br>Across
+                      Partners and Supply Chain
+                    </p>
+                    <p><strong>Digital Trust</strong> 김창수 전무</p>
+                  </td>
+
+                  <td>
+                    <p>
+                      본인확인, 간편인증<br />
+                      이제는 토스 인증서 하나로 본인인증
+                    </p>
+                    <p><strong>토스</strong> 방승익 실장</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">16:40 - 17:00</th>
+
+                  <td>
+                    <p>블록체인 인증과 미래 교육 서비스</p>
+                    <p><strong>중앙대학교</strong> 장항배 교수</p>
+                  </td>
+
+                  <td>
+                    <p>네이버와 함께 하는 디지털 트랜스포메이션</p>
+                    <p><strong>네이버</strong> 최욱동 리더</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">17:00 - 17:10</th>
+
+                  <td class="white-color">경품 추첨 및 Closing</td>
+
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <span class="text-right">
+              ※위 주제와 시간은 주최 측의 사정에 따라 변경될 수 있습니다.
+            </span>
+          </div>
+
+          <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="mint-color">- EVENT -</h1>
+
+            <div class="event-container">
+              <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inner">
+                  <div class="content">
+                    <p>EVENT 1 - 사전등록 이벤트</p>
+
+                    <div class="box">
+                      <div class="text-group">
+                        <p class="mint-color">떴다! 시큐업 얼리버드</p>
+                        <p>9/5(월) 9시 - 9/25(일) 18시</p>
+                        <p>
+                          선착순으로 사전 등록을 하신 분들께<br />
+                          시원한 카페라떼 쿠폰을 드립니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inner">
+                  <div class="content">
+                    <p>EVENT 2 - 사전등록 이벤트</p>
+
+                    <div class="box">
+                      <div class="text-group">
+                        <p class="mint-color">캐치업 세미나</p>
+                        <p>9/5(월) 9시 - 9/25(일) 18시</p>
+                        <p>
+                          사전등록 후 시큐업 세미나에 참석하신 분 중<br />
+                          세 분을 선정하여 ‘옴니원 통합인증 서비스’를<br />
+                          소개하는 조찬세미나를 제공합니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inner">
+                  <div class="content">
+                    <p>EVENT 3 - 현장 이벤트</p>
+
+                    <div class="box">
+                      <div class="text-group">
+                        <p class="purple-color">라온 픽미픽미</p>
+                        <p>행사 당일(10/4)</p>
+                        <p>
+                          라온을 대표하는 라오니, 라오나, 라옹이를<br />
+                          재미있는 인형 뽑기로 만나보세요!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
+
+                <div class="inner">
+                  <div class="content">
+                    <p>EVENT 4 - 현장 이벤트</p>
+
+                    <div class="box">
+                      <div class="text-group">
+                        <p class="purple-color">Lucky Draw</p>
+                        <p>행사 당일(10/4)</p>
+                        <p>
+                          세미나 종료 후 현장 추첨을 통해 당첨자 분들께 다양한
+                          경품을 드립니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="text-left">
+                    &lt;이벤트 주의사항 &gt;<br />
+                    *상기 이미지와 실제 지급 받는 경품의 색상은 다를 수 있으며, 이벤트 내용 및 경품은 변경될 수 있습니다.<br />
+                    *얼리버드 이벤트 경품은 행사 종료 후 14일 이내 당첨자에게 개별 연락 후 발송 예정입니다.<br />
+                    *Lucky Draw 경품은 1인당 1개만 수령 가능하며 행사 종료 후 당첨자에게 개별 발송 예정입니다.<br />
+                    *모든 이벤트 경품은 경쟁사/파트너사/주최사, 주관사 임직원에게는 지급되지 않습니다.
+                  </p>
+                </div>
+
+              </div>
+            </div>
 
             <button data-tf-popup="FbDDQjEj" data-tf-size="70" data-tf-iframe-props="title=[사전등록] 시큐업 세미나 2022 참가신청"
-              data-tf-medium="snippet">
+              data-tf-medium="snippet" data-aos="fade-up" data-aos-duration="1000">
               사전 등록하기
             </button>
+
           </div>
 
-        </div>
+          <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="mint-color">
+              - LOCATION -
 
-        <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
-          <h1 class="mint-color">- SPEAKERS -</h1>
+              <p>
+                서울 강남구 영동대로 513(삼성동, 코엑스) 컨퍼런스룸 3층 E 5, 6
+              </p>
+            </h1>
 
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackA-img-did"></div>
-                  <p>
-                    한국디지털인증협회<br />
-                    이기혁 회장
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackA-img-adi"></div>
-                  <p>
-                    ADI Association<br />
-                    Ramesh Kesanupalli
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackA-img-mois"></div>
-                  <p>
-                    행정안전부<br />
-                    이상민 과장
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackA-img-raonwh-1"></div>
-                  <p>
-                    라온화이트햇<br />
-                    김태진 전무
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackA-img-mma"></div>
-                  <p>
-                    병무청<br />
-                    백상현 서기관
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackA-img-raonwh-2"></div>
-                  <p>
-                    라온화이트햇<br />
-                    김진호 이사
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackB-img-dt"></div>
-                  <p>
-                    Digital Trust<br />
-                    김창수 전무
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackB-img-chungang"></div>
-                  <p>
-                    중앙대학교<br />
-                    장항배 교수
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackB-img-kisa"></div>
-                  <p>
-                    KISA<br />
-                    박정효 책임
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackB-img-nh"></div>
-                  <p>
-                    NH농협상호금융<br />
-                    정재헌 부장
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackB-img-naver"></div>
-                  <p>
-                    네이버<br />
-                    최동욱 리더
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="item-group">
-                  <div class="img-box trackB-img-tos"></div>
-                  <p>
-                    토스<br />
-                    방승익 실장
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </div>
-
-        <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
-          <h1 class="mint-color">- AGENDA -</h1>
-
-          <table>
-            <tbody class="text-left">
-              <tr>
-                <th scope="row">13:00 - 14:00</th>
-                <td class="white-color">등록 및 전시부스 관람</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <th scope="row">14:00 - 14:10</th>
-                <td>오프닝: 디지털 인증의 현재와 미래</td>
-                <td><strong>한국디지털인증협회</strong> 이기혁 회장</td>
-              </tr>
-
-              <tr>
-                <th scope="row">14:10 - 14:30</th>
-                <td>
-                  Balancing Security and Privacy <br>with Trust and Accountability
-                </td>
-                <td><strong>ADI Association</strong> Ramesh Kesanupalli</td>
-              </tr>
-
-              <tr>
-                <th scope="row">14:30 - 14:50</th>
-                <td>'모바일 운전면허증' 신분증의 패러다임을 바꾸다</td>
-                <td><strong>행정안전부</strong> 이상민 과장</td>
-              </tr>
-
-              <tr>
-                <th scope="row">14:50 - 15:10</th>
-                <td>인증 서비스의 새로운 기준, OmniOne 통합인증 서비스</td>
-                <td><strong>라온화이트햇</strong> 김태진 전무</td>
-              </tr>
-
-              <tr>
-                <th scope="row">15:10 - 15:40</th>
-                <td class="white-color">Coffee Break / 전시부스 관람</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <th scope="row">15:40 - 16:00</th>
-
-                <td>
-                  <div class="radius-box skyBlue-color">Track A</div>
-                  <p>MZ세대를 겨냥한 'e-병무지갑' 서비스</p>
-                  <p><strong>병무청</strong> 백상현 서기관</p>
-                </td>
-
-                <td>
-                  <div class="radius-box purple-color">Track B</div>
-                  <p>다양한 전자서명수단의 차별 없는 경쟁환경 조성 방향</p>
-                  <p><strong>KISA</strong> 박정효 책임</p>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">16:00 - 16:20</th>
-
-                <td>
-                  <p>옴니원, NFT의 미래 게임 체인저</p>
-                  <p><strong>라온화이트햇</strong> 김진호 이사</p>
-                </td>
-
-                <td>
-                  <p>디지털 인증을 활용한 안전하고 편리한 모두의 전자지갑</p>
-                  <p><strong>NH농협상호금융</strong> 정재헌 부장</p>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">16:20 - 16:40</th>
-
-                <td>
-                  <p>
-                    DTX: Securing Enterprises from External Identities <br>Across
-                    Partners and Supply Chain
-                  </p>
-                  <p><strong>Digital Trust</strong> 김창수 전무</p>
-                </td>
-
-                <td>
-                  <p>
-                    본인확인, 간편인증<br />
-                    이제는 토스 인증서 하나로 본인인증
-                  </p>
-                  <p><strong>토스</strong> 방승익 실장</p>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">16:40 - 17:00</th>
-
-                <td>
-                  <p>블록체인 인증과 미래 교육 서비스</p>
-                  <p><strong>중앙대학교</strong> 장항배 교수</p>
-                </td>
-
-                <td>
-                  <p>네이버와 함께 하는 디지털 트랜스포메이션</p>
-                  <p><strong>네이버</strong> 최욱동 리더</p>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">17:00 - 17:10</th>
-
-                <td class="white-color">경품 추첨 및 Closing</td>
-
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <span class="text-right">
-            ※위 주제와 시간은 주최 측의 사정에 따라 변경될 수 있습니다.
-          </span>
-        </div>
-
-        <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
-          <h1 class="mint-color">- EVENT -</h1>
-
-          <div class="event-container">
-            <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
+            <div class="location-group">
               <div class="inner">
-                <div class="content">
-                  <p>EVENT 1 - 사전등록 이벤트</p>
-
-                  <div class="box">
-                    <div class="text-group">
-                      <p class="mint-color">떴다! 시큐업 얼리버드</p>
-                      <p>9/5(월) 9시 - 9/25(일) 18시</p>
-                      <p>
-                        선착순으로 사전 등록을 하신 분들께<br />
-                        시원한 카페라떼 쿠폰을 드립니다.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
-              <div class="inner">
-                <div class="content">
-                  <p>EVENT 2 - 사전등록 이벤트</p>
-
-                  <div class="box">
-                    <div class="text-group">
-                      <p class="mint-color">캐치업 세미나</p>
-                      <p>9/5(월) 9시 - 9/25(일) 18시</p>
-                      <p>
-                        사전등록 후 시큐업 세미나에 참석하신 분 중<br />
-                        세 분을 선정하여 ‘옴니원 통합인증 서비스’를<br />
-                        소개하는 조찬세미나를 제공합니다.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
-              <div class="inner">
-                <div class="content">
-                  <p>EVENT 3 - 현장 이벤트</p>
-
-                  <div class="box">
-                    <div class="text-group">
-                      <p class="purple-color">라온 픽미픽미</p>
-                      <p>행사 당일(10/4)</p>
-                      <p>
-                        라온을 대표하는 라오니, 라오나, 라옹이를<br />
-                        재미있는 인형 뽑기로 만나보세요!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="event-group" data-aos="fade-up" data-aos-duration="1000">
-
-              <div class="inner">
-                <div class="content">
-                  <p>EVENT 4 - 현장 이벤트</p>
-
-                  <div class="box">
-                    <div class="text-group">
-                      <p class="purple-color">Lucky Draw</p>
-                      <p>행사 당일(10/4)</p>
-                      <p>
-                        세미나 종료 후 현장 추첨을 통해 당첨자 분들께 다양한
-                        경품을 드립니다.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="text-left">
-                  &lt;이벤트 주의사항 &gt;<br />
-                  *상기 이미지와 실제 지급 받는 경품의 색상은 다를 수 있으며, 이벤트 내용 및 경품은 변경될 수 있습니다.<br />
-                  *얼리버드 이벤트 경품은 행사 종료 후 14일 이내 당첨자에게 개별 연락 후 발송 예정입니다.<br />
-                  *Lucky Draw 경품은 1인당 1개만 수령 가능하며 행사 종료 후 당첨자에게 개별 발송 예정입니다.<br />
-                  *모든 이벤트 경품은 경쟁사/파트너사/주최사, 주관사 임직원에게는 지급되지 않습니다.
-                </p>
+                <img src="img/location-map.png" alt="" />
               </div>
 
+              <p>
+                안내 및 주의사항 :<br />
+                - 본 행사는 무료 행사로, 좌석이 한정되어 있으니 사전 등록을 해주시기 바랍니다.<br />
+                - 사전 등록자의 입장을 우선하며, 정원이 초과될 경우 현장 등록자는 입장에 제한이 있을 수 있습니다.<br />
+                - 사전 등록자 확인은 행사 당일 13시부터 시작됩니다.<br />
+                - 주차는 지원하지 않으니, 가급적 대중교통을 이용해 주시길 바랍니다.<br />
+                - 행사 및 이벤트 관련 문의: mkt@raoncorp.com
+              </p>
             </div>
           </div>
-
-          <button data-tf-popup="FbDDQjEj" data-tf-size="70" data-tf-iframe-props="title=[사전등록] 시큐업 세미나 2022 참가신청"
-            data-tf-medium="snippet" data-aos="fade-up" data-aos-duration="1000">
-            사전 등록하기
-          </button>
 
         </div>
 
-        <div class="agenda-group" data-aos="fade-up" data-aos-duration="2000">
-          <h1 class="mint-color">
-            - LOCATION -
+        <div class="background-image">
+          <img class="human-img" src="img/body_bg_01.png" alt="" />
+          <img class="num-img" src="img/body_bg_02.png" alt="" />
+        </div>
+      </section>
 
-            <p>
-              서울 강남구 영동대로 513(삼성동, 코엑스) 컨퍼런스룸 3층 E 5, 6
-            </p>
-          </h1>
+      <footer>
+        <div class="container">
+          <div class="logo"></div>
 
-          <div class="location-group">
-            <div class="inner">
-              <img src="img/location-map.png" alt="" />
+          <div class="text-group">
+            <div class="text-item">
+              <p>
+                서울특별시 강남구 테헤란로 145 (역삼동 우신빌딩 15층)
+              </p>
+              <p>
+                대표전화 070-8240-5530<br />
+                홈페이지 <a href="http://www.didalliance.org">www.didalliance.org</a>
+              </p>
             </div>
 
-            <p>
-              안내 및 주의사항 :<br />
-              - 본 행사는 무료 행사로, 좌석이 한정되어 있으니 사전 등록을 해주시기 바랍니다.<br />
-              - 사전 등록자의 입장을 우선하며, 정원이 초과될 경우 현장 등록자는 입장에 제한이 있을 수 있습니다.<br />
-              - 사전 등록자 확인은 행사 당일 13시부터 시작됩니다.<br />
-              - 주차는 지원하지 않으니, 가급적 대중교통을 이용해 주시길 바랍니다.<br />
-              - 행사 및 이벤트 관련 문의: mkt@raoncorp.com
-            </p>
+            <div class="text-item">
+              <p>
+                ⓒ Copyright 2022, All Rights Reserved.
+              </p>
+            </div>
           </div>
         </div>
-
-      </div>
-
-      <div class="background-image">
-        <img class="human-img" src="img/body_bg_01.png" alt="" />
-        <img class="num-img" src="img/body_bg_02.png" alt="" />
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="logo"></div>
-
-        <div class="text-group">
-          <div class="text-item">
-            <p>
-              서울특별시 강남구 테헤란로 145 (역삼동 우신빌딩 15층)
-            </p>
-            <p>
-              대표전화 070-8240-5530<br />
-              홈페이지 <a href="http://www.didalliance.org">www.didalliance.org</a>
-            </p>
-          </div>
-
-          <div class="text-item">
-            <p>
-              ⓒ Copyright 2022, All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </div>
 
   <script type="text/javascript">
+
     $(function () {
-      var body = $('body');
       var scrollBody = $('.fix_motion'); // 부모 스크롤 엘리먼트
       var scrollHeight; // 스크롤 높이
       var sectionOffsetTop; //섹션의 오프셋 탑 변수
@@ -635,20 +627,6 @@
       var imgHeight; // 이미지 높이
       var imgArray = []; // 이미지를 담을 배열
       var imageIterlator = 0; // 이미지가 로드 되었는지 체크하는 값
-      var currentDirection = ''; // 현재의 방향을 나타내는 변수
-      var lastScrollTop = 0; // 방향을 구하기 위해 사용되는 변수
-
-      var scrollStop = $('.scroll-stop');
-
-      window.onload = function () {
-        if (sectionScrollTop === 0) {
-          $('.scroll-stop').on('scroll touchmove mousewheel', e => {
-            e.preventDefault();
-            e.stopPropagation();
-          });
-        }
-      }
-
 
 
       function setProperty() { // 스크롤 할 때 변할 값을 세팅해주는 함수
@@ -675,45 +653,35 @@
         canvas.height = imgHeight; // 캔버스 높이
       }
 
-      function contentIn() {
-        if (sectionScrollTop >= 1000) {
-          $('.scroll-stop').addClass('on');
-          $('.fix_motion').addClass('off');
-        };
-      }
-
-
       function scrollFunc() { // 스크롤 할때 실행될 함수
-        scrollStop();
+
         var sequence = Math.max(imgLength - imgLength, Math.min(Number((imgLength - imgLength - (imgLength - imgLength - imgLength * scrollPercent)).toFixed(0)), imgLength));
         //이미지 시퀸스 번호 구함
 
         renderCanvas(sequence);
         contentIn();
 
-        // console.log($(window).scrollTop());
-        // console.log(scrollPercent);
-        console.log(sectionScrollTop);
+        console.log(winScrollTop);
+      }
+
+      function contentIn() {
+        if (percent >= 90) {
+          $('.fix_motion').addClass('off');
+
+          if ($('.fix_motion').hasClass('off') === true) {
+            $('.cont').addClass('on');
+
+            $(window).scrollTop(0);
+          }
+          init();
+        }
+        return;
       }
 
       function renderCanvas(sequence) { // 캔버스에 이미지 Draw
         ctx.clearRect(0, 0, imgWidth, imgHeight); // 지정한 x, y위치값과 넓이 높이 값을 넣어 캔버스를 클리어
         ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight); // 이미지 배열에 담아둔 이미지를 캔버스에 그림
       }
-
-
-
-      // function contentIn() {
-      //   if (percent >= 90) {
-      //     $('.scroll-stop').addClass('on');
-      //     window.scrollTo(0, 0);
-      //     console.log('scrollTop');
-
-      //     if ($(window).scrollTop() === 0) {
-      //       event.stopPropagation();
-      //     }
-      //   }
-      // }
 
       function bindEvent() { // 이벤트를 추가 하는 함수
         $(window).scroll(function () { // 1.스크롤 이벤트
@@ -756,118 +724,13 @@
       if (Modernizr.csspositionsticky) { // 브라우저가 sticky를 지원할 경우 실행
         init(); // START
       }
-
-      window.onload = function () {
-        setTimeout(function () {
-          scrollTo(0, 0);
-          init();
-        });
-      }
-
     });
-
-    $(function () {
-      var matrix = (function () {
-        var init = function () {
-          document.body.style.background = 'black';
-          var mdr = document.createElement('canvas');
-          var elMain = document.querySelector('#main' && '#top');
-
-          document.body.prepend(mdr);
-
-          var ctx = mdr.getContext('2d');
-
-          mdr.height = elMain.offsetHeight;
-          mdr.width = elMain.offsetWidth;
-
-          //making the canvas full screen
-          // mdr.height = window.innerHeight;
-          // mdr.width = window.innerWidth;
-          elMain.appendChild(mdr);
-          //code characters - taken from the unicode charset
-          var code = '0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0';
-          //converting the string into an array of single characters
-          code = code.split('');
-
-          var font_size = 24;
-          var columns = mdr.width / font_size; //number of columns for the rain
-          //an array of drops - one per column
-          var drops = [];
-          //x below is the x coordinate
-          //1 = y co-ordinate of the drop(same for every drop initially)
-          for (var x = 0; x < columns; x++) {
-            drops[x] = 400;
-          }
-
-          window.addEventListener('resize', function () {
-            window.requestAnimationFrame(function () {
-              mdr.height = window.innerHeight;
-              mdr.width = window.innerWidth;
-              columns = mdr.width / font_size;
-              for (var x = 0; x < columns; x++) {
-                drops[x] = 400;
-              }
-            });
-          });
-
-          //drawing the characters
-          var draw = function () {
-            //Black BG for the canvas
-            //translucent BG to show trail
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
-            ctx.fillRect(0, 0, mdr.width, mdr.height);
-
-            ctx.fillStyle = '#00fff23e'; //text color
-            ctx.font = font_size + 'px arial';
-            //looping over drops
-            for (var i = 0; i < drops.length; i++) {
-
-              //a random code character to print
-              var text = code[Math.floor(Math.random() * code.length)];
-              //x = i*font_size, y = value of drops[i]*font_size
-              ctx.fillText(text, i * font_size, drops[i] * font_size);
-
-              //sending the drop back to the top randomly after it has crossed the screen
-              //adding a randomness to the reset to make the drops scattered on the Y axis
-              if (drops[i] * font_size > mdr.height && Math.random() > 0.975) {
-                //if(Math.random() > 0.975) {
-                drops[i] = 0;
-              }
-
-              //incrementing Y coordinate
-              drops[i]++;
-            }
-          };
-
-          setInterval(function () {
-            window.requestAnimationFrame(draw);
-          }, 60);
-        };
-
-        return {
-          init: init,
-        };
-      })();
-
-      // init on dom ready
-      (function (fn) {
-        var d = document;
-        d.readyState == 'loading'
-          ? d.addEventListener('DOMContentLoaded', fn)
-          : fn();
-      })(function () {
-        matrix.init();
-      });
-    })
-
-
 
   </script>
 
   <script>
-    /** Animation on Scroll */
+
     AOS.init();
-    /** END / Animation on Scroll */
   </script>
 
   <script src="//embed.typeform.com/next/embed.js"></script>

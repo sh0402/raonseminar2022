@@ -27,10 +27,9 @@ html, body {
 }
 
 body {
-  position: relative;
+  position: relaative;
   background-color: black;
   color: white;
-  height: 500vh;
 }
 
 button {
@@ -177,6 +176,22 @@ strong {
 .main_cont.on {
   opacity: 1;
   overflow: visible;
+}
+
+.wrap {
+  position: relative;
+}
+
+.cont {
+  display: none;
+}
+
+.on {
+  display: block !important;
+}
+
+.off {
+  display: none;
 }
 
 #main {

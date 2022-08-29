@@ -173,6 +173,7 @@
 
   <script type="text/javascript">
     $(function () {
+      var body = $('body');
       var scrollBody = $('.fix_motion'); // 부모 스크롤 엘리먼트
       var scrollHeight; // 스크롤 높이
       var sectionOffsetTop; //섹션의 오프셋 탑 변수
@@ -199,8 +200,7 @@
       var imgHeight; // 이미지 높이
       var imgArray = []; // 이미지를 담을 배열
       var imageIterlator = 0; // 이미지가 로드 되었는지 체크하는 값
-      var currentDirection = ''; // 현재의 방향을 나타내는 변수
-      var lastScrollTop = 0; // 방향을 구하기 위해 사용되는 변수
+
 
 
       function setProperty() { // 스크롤 할 때 변할 값을 세팅해주는 함수
@@ -227,25 +227,17 @@
         canvas.height = imgHeight; // 캔버스 높이
       }
 
-
       function scrollFunc() { // 스크롤 할때 실행될 함수
+
         var sequence = Math.max(imgLength - imgLength, Math.min(Number((imgLength - imgLength - (imgLength - imgLength - imgLength * scrollPercent)).toFixed(0)), imgLength));
         //이미지 시퀸스 번호 구함
+
         renderCanvas(sequence);
-        contentIn();
       }
 
       function renderCanvas(sequence) { // 캔버스에 이미지 Draw
         ctx.clearRect(0, 0, imgWidth, imgHeight); // 지정한 x, y위치값과 넓이 높이 값을 넣어 캔버스를 클리어
         ctx.drawImage(imgArray[sequence], 0, 0, imgWidth, imgHeight); // 이미지 배열에 담아둔 이미지를 캔버스에 그림
-      }
-
-      function contentIn() {
-        if (percent >= 80) {
-          $('.canvas_wrap > canvas').addClass('off');
-          $('#sec01').css('position', 'to');
-          scrollFunc().off
-        }
       }
 
       function bindEvent() { // 이벤트를 추가 하는 함수
@@ -262,6 +254,7 @@
       }
 
       function init() { // 초기화 함수
+
         el.appendChild(canvas); // canvas_wrap 엘리먼트에 canvas를 담아줌
 
         for (var i = 0; i <= imgLength; i++) {
@@ -287,12 +280,6 @@
 
       if (Modernizr.csspositionsticky) { // 브라우저가 sticky를 지원할 경우 실행
         init(); // START
-      }
-
-      window.onload = function () {
-        setTimeout(function () {
-          scrollTo(0, 0);
-        }, 100);
       }
     });
 
