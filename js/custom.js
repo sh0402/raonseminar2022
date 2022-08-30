@@ -41,20 +41,21 @@ var matrix = (function () {
   var init = function () {
     document.body.style.background = 'black';
     var mdr = document.createElement('canvas');
-    var elMain = document.querySelector('#main');
-    
+    var element = document.querySelector('.matrix');
+    var fixed = document.querySelector('.fix_motion');
+
     document.body.prepend(mdr);
 
     var ctx = mdr.getContext('2d');
     var mainBg = document.getElementById('main');
 
-    mdr.height = mainBg.offsetHeight;
-    mdr.width = mainBg.offsetWidth;
+    mdr.height = element.offsetHeight;
+    mdr.width = element.offsetWidth;
 
     //making the canvas full screen
     // mdr.height = window.innerHeight;
     // mdr.width = window.innerWidth;
-    elMain.appendChild(mdr);
+    
     //code characters - taken from the unicode charset
     var code = '0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0';
     //converting the string into an array of single characters
@@ -80,6 +81,10 @@ var matrix = (function () {
         }
       });
     });
+
+    for (let i = 0; i < mdr.length; i++) {
+      element.appendChild(mdr);
+    }
 
     //drawing the characters
     var draw = function () {
