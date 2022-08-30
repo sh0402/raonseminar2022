@@ -178,14 +178,41 @@ strong {
 
 .cont {
   display: none;
+  opacity: 0;
 }
 
 .on {
- display: block !important;
+  display: block;
+  opacity: 1;
+  animation: fade-in 1s;
+  animation-fill-mode: forwards;
 }
 
 .off {
   display: none;
+  opacity: 0;
+  animation: fade-out 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 #main {
@@ -198,7 +225,6 @@ strong {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -999;
   }
 
   .container {
@@ -696,60 +722,5 @@ footer {
         text-decoration: none;
       }
     }
-  }
-}
-
-
-
-//INTERACTION
-#interaction {
- 
-
-  .fix_motion {
-    height: 400vh;
-
-    .fix_wrap {
-      overflow: hidden;
-      position: sticky;
-      position: -webkit-sticky;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-
-      .cont_box  {
-        overflow: hidden;
-        position: relative;
-        height: 100%;
-
-        .canvas_wrap { 
-          position: relative;
-          width: 100%;
-          height: 100%;
-          
-          > canvas {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          .no_canvas {
-            display: none;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 1920px;
-            height: 1080px;
-          }
-        }
-      }
-    }
-  }
-
-  .fix_motion.off {
-    opacity: 0;
-    overflow: hidden;
   }
 }
