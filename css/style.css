@@ -168,16 +168,6 @@ strong {
   background: url("../img/speakers-thumb/trackB-img-tos.png") no-repeat center center/cover;
 }
 
-.main_cont {
-  opacity: 0;
-  overflow: hidden;
-}
-
-.main_cont.on {
-  opacity: 1;
-  overflow: visible;
-}
-
 .wrap {
   position: relative;
 }

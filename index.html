@@ -65,6 +65,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -999;
+
   }
 
   .fix_motion .no-csspositionsticky .fix_motion {
@@ -126,36 +127,38 @@
     </section>
 
     <section class="cont matrix" id="main">
-      <div class="main_img">
-        <img src="img/main-img.png" alt="" />
-      </div>
-
-      <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-        <div class="title-group">
-          <h1 class="primary-color">시큐업 세미나 2022</h1>
-          <h5 class="primary-color">디지털 인증의 현재와 미래</h5>
+      <div class="container">
+        <div class="main_img">
+          <img src="img/main-img.png" alt="" />
         </div>
 
-        <div class="info-text" data-aos="fade-up">
-          <div class="text-group">
-            <div class="item mint-color">
-              <div class="radius-box">일시</div>
-              <p>2022.10.4(화) 13:00 - 17:10</p>
-            </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+          <div class="title-group">
+            <h1 class="primary-color">시큐업 세미나 2022</h1>
+            <h5 class="primary-color">디지털 인증의 현재와 미래</h5>
+          </div>
 
-            <div class="item mint-color">
-              <div class="radius-box">장소</div>
-              <p>코엑스 컨퍼런스 E5, E6</p>
-            </div>
+          <div class="info-text" data-aos="fade-up">
+            <div class="text-group">
+              <div class="item mint-color">
+                <div class="radius-box">일시</div>
+                <p>2022.10.4(화) 13:00 - 17:10</p>
+              </div>
 
-            <div class="item mint-color">
-              <div class="radius-box">주최 / 주관</div>
-              <p>한국디지털인증협회 / 라온시큐어</p>
-            </div>
+              <div class="item mint-color">
+                <div class="radius-box">장소</div>
+                <p>코엑스 컨퍼런스 E5, E6</p>
+              </div>
 
-            <div class="item mint-color">
-              <div class="radius-box">협찬</div>
-              <p>NH농협중앙회, 네이버, 토스, Digital Trust</p>
+              <div class="item mint-color">
+                <div class="radius-box">주최 / 주관</div>
+                <p>한국디지털인증협회 / 라온시큐어</p>
+              </div>
+
+              <div class="item mint-color">
+                <div class="radius-box">협찬</div>
+                <p>NH농협중앙회, 네이버, 토스, Digital Trust</p>
+              </div>
             </div>
           </div>
         </div>
@@ -600,9 +603,6 @@
   </div>
 
   <script type="text/javascript">
-    // window.onload = function () {
-    //   $('.cont').addClass('off');
-    // }
 
     $(function () {
       var scrollBody = $('.fix_motion'); // 부모 스크롤 엘리먼트
@@ -621,7 +621,7 @@
       var el = document.querySelector('.canvas_wrap'); // 캔버스를 담을 변수
       var canvas = document.createElement('canvas'); // 캔버스 생성
       var ctx = canvas.getContext('2d'); // 랜더링 컨텍스트 타입을 2D로 선언
-      var imgSrc = 'img/hero-move/'; // 이미지 경로 설정
+      var imgSrc = 'https://sh0402.github.io/raonseminar2022/img/hero-move/'; // 이미지 경로 설정
       var imgFormat = '.png'; // 이미지 포멧 설정
       var imgLength = 113;  // 총 이미지의 렝스
 
@@ -665,19 +665,18 @@
         renderCanvas(sequence);
         AOS.init();
         contentIn();
-        console.log(winScrollTop);
       }
 
       function contentIn() {
         if (percent >= 90) {
           $('.fix_motion').addClass('off');
 
+          window.scrollTo(0, 0);
+
           if ($('.fix_motion').hasClass('off') === true) {
             $('.cont').removeClass('off');
             $('.cont').addClass('on');
           }
-          init();
-          window.scrollTo(0, 0);
         }
         return;
       }

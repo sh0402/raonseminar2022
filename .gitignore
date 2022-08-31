@@ -2,3 +2,6 @@
 *.bak
 *.zip
 *.vscode
+/backup
+/backup 0
+/backup 1
