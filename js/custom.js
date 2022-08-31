@@ -31,6 +31,9 @@ const swiper = new Swiper('.swiper', {
       spaceBetween: 80,
     },
   },
+  autoplay: {
+    delay: 3000,
+  },
 });
 
 /** END / Swiper */
