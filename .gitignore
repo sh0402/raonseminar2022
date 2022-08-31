@@ -3,6 +3,6 @@
 *.zip
 *.vscode
 /backup
-/backup 0
-/backup 1
+/img/hero-move/backup_1
+/img/hero-move/backup_2
 /참고자료
