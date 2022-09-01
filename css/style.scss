@@ -127,29 +127,68 @@ strong {
 }
 
 // ARROW DOWN
-.arrow-down {  
+.arrow-down {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.5;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  bottom: 12%;
 
-.arrow-down::before {
-  animation: bounce 1s ease infinite;
-  bottom: 2rem;
-  color: #fff;
-  content: '╲╱';
-  font-size: 1.5rem;
-  height: 3rem;
-  left: 50%;
-  letter-spacing: -1px;
-  line-height: 4rem;
-  margin-left: -3rem;
-  opacity: 0.8;
-  position: absolute;
-  text-align: center;
-  width: 6rem;
+  .arrow-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 1.5rem;
+
+    >span {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 4.5rem;
+      font-size: 0.75rem;
+      color: #fff;
+      text-transform: uppercase;
+      white-space: nowrap;
+      opacity: .25;
+      animation: pulse 2s linear alternate infinite;
+    }
+  }
+
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+
+    &:first-child {
+      animation: move 3s ease-out 1s infinite;
+    }
+    &:nth-child(2) {
+      animation: move 3s ease-out 2s infinite;
+    }
+    &:before,
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 51%;
+      background: #fff;
+    }
+    &:before {
+      left: 0;
+      transform: skew(0deg, 30deg);
+    }
+    &:after {
+      right: 0;
+      width: 50%;
+      transform: skew(0deg, -30deg);
+    }
+  }
 }
 
 // INTERACTION
@@ -201,7 +240,6 @@ strong {
     }
   }
 }
-
 
 //SPEAKERS 썸네일
 //TRACK_A
@@ -800,6 +838,7 @@ footer {
 // KEYFRAMES
 @keyframes bounce {
   50% {
+    // transform: translateY(0%) ;
     transform: translateY(-50%);
   }
 }
@@ -820,5 +859,30 @@ footer {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
   }
 }

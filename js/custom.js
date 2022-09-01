@@ -203,6 +203,7 @@ $(function () {
   function contentIn() {
     if (percent >= 90) {
       $('.fix_motion').addClass('off');
+      $('.arrow-down').addClass('off');
 
       window.scrollTo(0, 0);
 
